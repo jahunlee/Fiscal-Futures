@@ -469,3 +469,22 @@ Revenue categories are aggregated under the following revenue type codes. \>\[!C
 -   98. Prior Year Refunds. 
 -   
     99. Statutory Transfers
+    
+    
+    
+    
+# Reporting
+
+1. Calculating the Fiscal Gap3  Pension Costs Included within Department Expenditures
+2. Illinois State Budget Data
+3. Own Source Revenue
+4. Federal Revenue
+5. Local Transfers
+6. Medicaid
+7. Debt Service Discussion
+8. Pensions
+9. State Employee Healthcare Discussion
+10. Tax Refunds
+11. K-12 Spending & ESSER Funds
+12. Federal COVID Money Received
+

@@ -2,6 +2,10 @@
 title: "FF Manual"
 format: html
 editor: visual
+  html:
+    toc: true          # 목차 활성화
+    toc-location: left # 왼쪽에 고정 (right도 가능)
+    toc-title: "Contents"
 ---
 
 ## Table of Contents
@@ -274,15 +278,24 @@ Save tax refunds as negative revenue. - Code refunds to match the rev_type codes
     -   598.  Upper Illinois River Valley Development Authority
 -   **948.       Other Departments**.  Combination of
     -   442.  Department of Human Rights
-    -   445.  IL Power Agency
-    -   452.  Department of Labor
-    -   458.  Illinois Lottery
-    -   497.  Department of Veterans Affairs
-    -   507.  Governor's Office of Management and Budget
-    -   ***Non-pension items from pension departments***
-        -   
 
-            131. General Assembly Retirement System
+    -   445.  IL Power Agency
+
+    -   452.  Department of Labor
+
+    -   458.  Illinois Lottery
+
+    -   497.  Department of Veterans Affairs
+
+    -   507.  Governor's Office of Management and Budget
+
+    -   
+
+        ## ***Non-pension items from pension departments***
+
+        ```         
+        131. General Assembly Retirement System
+        ```
 
         -   
 

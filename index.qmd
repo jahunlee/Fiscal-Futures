@@ -5,6 +5,9 @@ format:
     toc: true
     toc-location: left
     toc-title: "Contents"
+execute:
+  tidy: false
+
 ---
 
 

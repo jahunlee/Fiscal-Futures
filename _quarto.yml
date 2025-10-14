@@ -1,6 +1,13 @@
 project:
   type: website
 
+execute: 
+  tidy: true
+
+exclude:
+  - "*.R"
+  - "Files/"
+  
 website:
   title: "My Manual for Fiscal Futures"
   site-url: https://jahunlee.github.io/Fiscal-Futures

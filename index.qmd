@@ -506,6 +506,7 @@ Revenue categories are aggregated under the following revenue type codes. \>\[!C
 
 
 
+
 1. Calculating the Fiscal Gap
 2. Pension Costs Included within Department Expenditures
 3. Illinois State Budget Data

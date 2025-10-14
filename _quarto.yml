@@ -1,12 +1,7 @@
 project:
   type: website
-
-execute: 
-  tidy: true
-
-exclude:
-  - "*.R"
-  - "Files/"
+  render:
+    - "*!Files/*"
   
 website:
   title: "My Manual for Fiscal Futures"
@@ -15,3 +10,4 @@ website:
     left:
       - href: index.qmd
         text: Home
+        

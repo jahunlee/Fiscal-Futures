@@ -480,9 +480,9 @@ Revenue categories are aggregated under the following revenue type codes. \>\[!C
     
 # Reporting
 
-- `exp_fy20**_recoded.csv`, `rev_fy20**_recoded.csv` : Data from FY1998 after data processing
+- Wide version:
+  - `exp_fy20**_recoded.csv`, `rev_fy20**_recoded.csv` : Data from FY1998 after data processing
 [View code in `Everything.qmd`](https://github.com/jahunlee/Fiscal-Futures/blob/5291c2791984b1819f938ef2e7a31b3f04c1bbd2/Files/Everything.qmd#L885-L886)
-
 
 
 - Long version: 
@@ -493,7 +493,7 @@ Revenue categories are aggregated under the following revenue type codes. \>\[!C
   - `summary_file_FY24_wTotals_2025_02_06.xlsx` " Summary workbook containing data (FY1998~FY2024)
 
 
-[View code lines 2247–2279 of `Everything.qmd`](https://github.com/jahunlee/Fiscal-Futures/blob/5291c2791984b1819f938ef2e7a31b3f04c1bbd2/Files/Everything.qmd#L2247-L2279)
+[View code](https://github.com/jahunlee/Fiscal-Futures/blob/5291c2791984b1819f938ef2e7a31b3f04c1bbd2/Files/Everything.qmd#L2247-L2279)
 
   - Table 1 (Main Revenues): Top 10 revenue categories, 1-year change,  `r as.numeric(format(Sys.Date(), "%Y")) - 1998` CAGR
   - Table 2 (Main Expenditures): Top 13 expenditure categories, 1-year change, with  `r as.numeric(format(Sys.Date(), "%Y")) - 1998`-year CAGR
@@ -507,7 +507,12 @@ Revenue categories are aggregated under the following revenue type codes. \>\[!C
 
 
 
-1. Calculating the Fiscal Gap
+
+- **Calulating**
+
+1. Calculating the Fiscal Gap [View code](https://github.com/jahunlee/Fiscal-Futures/blob/5291c2791984b1819f938ef2e7a31b3f04c1bbd2/Files/Everything.qmd#L1183-L1327)
+
+
 2. Pension Costs Included within Department Expenditures
 3. Illinois State Budget Data
 4. Own Source Revenue

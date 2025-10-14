@@ -1,0 +1,811 @@
+Year,type,Category,Dollars,Category_name
+1998,exp,402,214.77122968,Aging
+1998,exp,406,73.50042594,Agriculture
+1998,exp,416,423.60951816000005,Central Management
+1998,exp,418,1289.5464607200001,Children And Family Services
+1998,exp,420,463.81618836,Commerce And Economic Opportunity
+1998,exp,422,194.89239396000002,Natural Resources
+1998,exp,426,958.59698947,Corrections
+1998,exp,427,175.75534396,Employment Security
+1998,exp,444,3888.5689404600002,Human Services
+1998,exp,478,109.58750706999999,Family Services Net Medicaid
+1998,exp,482,158.4044241,Public Health
+1998,exp,492,433.52268926,Revenue
+1998,exp,494,1957.48413827,Transportation
+1998,exp,532,307.81796487,Environmental Protect Agency
+1998,exp,557,367.42032926,Il State Toll Highway Auth
+1998,exp,901,939.68070473,State Pension Contribution
+1998,exp,904,729.7605494300001,State Employee Healthcare
+1998,exp,910,59.49046214,Legislative
+1998,exp,920,262.75819552,Judicial
+1998,exp,930,404.42575775,Elected Officers
+1998,exp,941,426.30459976,Public Safety
+1998,exp,944,149.87525119,Bus & Profession Regulation
+1998,exp,945,5398.44057766,Medicaid
+1998,exp,946,256.16808825,Capital Improvement
+1998,exp,948,397.04004947,Other Departments
+1998,exp,949,92.45354959999999,Other Boards & Commissions
+1998,exp,959,5070.08825704,K-12 Education
+1998,exp,960,2080.99206449,University Education
+1998,exp,903,484.53383483,Debt Service
+1998,exp,970,3476.47340622,Local Govt Transfers
+1999,exp,402,235.903034,Aging
+1999,exp,406,88.21554232000001,Agriculture
+1999,exp,416,469.51687760000004,Central Management
+1999,exp,418,1329.33597189,Children And Family Services
+1999,exp,420,524.1481648399999,Commerce And Economic Opportunity
+1999,exp,422,231.22826156,Natural Resources
+1999,exp,426,1045.72673118,Corrections
+1999,exp,427,176.34769749,Employment Security
+1999,exp,444,4060.4600191600002,Human Services
+1999,exp,478,114.69215114000001,Family Services Net Medicaid
+1999,exp,482,165.10762511000001,Public Health
+1999,exp,492,469.5347072,Revenue
+1999,exp,494,1864.9061863099998,Transportation
+1999,exp,532,316.94037436,Environmental Protect Agency
+1999,exp,557,461.11222988,Il State Toll Highway Auth
+1999,exp,901,1171.6711626800002,State Pension Contribution
+1999,exp,904,779.0175351800001,State Employee Healthcare
+1999,exp,910,62.18552442,Legislative
+1999,exp,920,289.35690238,Judicial
+1999,exp,930,431.66406508,Elected Officers
+1999,exp,941,446.14314328,Public Safety
+1999,exp,944,160.54919709,Bus & Profession Regulation
+1999,exp,945,5767.25773417,Medicaid
+1999,exp,946,399.97357301,Capital Improvement
+1999,exp,948,371.63682897,Other Departments
+1999,exp,949,104.39273953,Other Boards & Commissions
+1999,exp,959,5589.444159279999,K-12 Education
+1999,exp,960,2185.2223170300003,University Education
+1999,exp,903,507.52762319,Debt Service
+1999,exp,970,4031.5164429099996,Local Govt Transfers
+2000,exp,402,260.62614194,Aging
+2000,exp,406,103.06928779,Agriculture
+2000,exp,416,483.39344232999997,Central Management
+2000,exp,418,1341.532393,Children And Family Services
+2000,exp,420,704.6414518500001,Commerce And Economic Opportunity
+2000,exp,422,271.14357793,Natural Resources
+2000,exp,426,1127.0670121800001,Corrections
+2000,exp,427,180.8863797,Employment Security
+2000,exp,444,4167.302961949999,Human Services
+2000,exp,478,134.93282343,Family Services Net Medicaid
+2000,exp,482,180.39286230000002,Public Health
+2000,exp,492,489.42467616000005,Revenue
+2000,exp,494,2448.11467302,Transportation
+2000,exp,532,355.48955874,Environmental Protect Agency
+2000,exp,557,434.67865002999997,Il State Toll Highway Auth
+2000,exp,901,1270.36618828,State Pension Contribution
+2000,exp,904,927.48653323,State Employee Healthcare
+2000,exp,910,67.9300845,Legislative
+2000,exp,920,325.18163279000004,Judicial
+2000,exp,930,478.96996614999995,Elected Officers
+2000,exp,941,469.34207338,Public Safety
+2000,exp,944,132.74381784,Bus & Profession Regulation
+2000,exp,945,6442.31650401,Medicaid
+2000,exp,946,828.4629936900001,Capital Improvement
+2000,exp,948,376.04716161,Other Departments
+2000,exp,949,129.04312993000002,Other Boards & Commissions
+2000,exp,959,6026.2937197,K-12 Education
+2000,exp,960,2281.1114653,University Education
+2000,exp,903,543.84052911,Debt Service
+2000,exp,970,4366.14101383,Local Govt Transfers
+2001,exp,402,283.86681541,Aging
+2001,exp,406,114.71194993,Agriculture
+2001,exp,416,489.33116483,Central Management
+2001,exp,418,1357.07671015,Children And Family Services
+2001,exp,420,763.42163682,Commerce And Economic Opportunity
+2001,exp,422,311.92955897,Natural Resources
+2001,exp,426,1201.67905289,Corrections
+2001,exp,427,282.39225598,Employment Security
+2001,exp,444,4484.1033765600005,Human Services
+2001,exp,478,133.86301818,Family Services Net Medicaid
+2001,exp,482,222.12913584,Public Health
+2001,exp,492,844.53331392,Revenue
+2001,exp,494,2683.11550823,Transportation
+2001,exp,532,389.15989298,Environmental Protect Agency
+2001,exp,557,346.13919503,Il State Toll Highway Auth
+2001,exp,901,1387.90332889,State Pension Contribution
+2001,exp,904,1000.12568813,State Employee Healthcare
+2001,exp,910,73.03187406,Legislative
+2001,exp,920,335.15047582,Judicial
+2001,exp,930,547.9304426599999,Elected Officers
+2001,exp,941,491.32241862,Public Safety
+2001,exp,944,144.59392472,Bus & Profession Regulation
+2001,exp,945,7187.341484529999,Medicaid
+2001,exp,946,890.31182376,Capital Improvement
+2001,exp,948,382.68138056,Other Departments
+2001,exp,949,137.58000557,Other Boards & Commissions
+2001,exp,959,6391.72170938,K-12 Education
+2001,exp,960,2425.9814376100003,University Education
+2001,exp,903,590.04423966,Debt Service
+2001,exp,970,4471.93355919,Local Govt Transfers
+2002,exp,402,297.38686848000003,Aging
+2002,exp,406,115.46288658,Agriculture
+2002,exp,416,485.2488773,Central Management
+2002,exp,418,1344.7420498800002,Children And Family Services
+2002,exp,420,811.33504932,Commerce And Economic Opportunity
+2002,exp,422,352.02856152,Natural Resources
+2002,exp,426,1257.93671002,Corrections
+2002,exp,427,340.08747237,Employment Security
+2002,exp,444,4495.541986159999,Human Services
+2002,exp,478,140.61213985999998,Family Services Net Medicaid
+2002,exp,482,265.6472456,Public Health
+2002,exp,492,706.85423597,Revenue
+2002,exp,494,3187.28685106,Transportation
+2002,exp,532,466.59616722000004,Environmental Protect Agency
+2002,exp,557,392.74387821,Il State Toll Highway Auth
+2002,exp,901,1507.05409953,State Pension Contribution
+2002,exp,904,1061.93568766,State Employee Healthcare
+2002,exp,910,78.64442212,Legislative
+2002,exp,920,366.72732849,Judicial
+2002,exp,930,570.45941158,Elected Officers
+2002,exp,941,489.28525106,Public Safety
+2002,exp,944,145.88579854,Bus & Profession Regulation
+2002,exp,945,7291.78917015,Medicaid
+2002,exp,946,1149.63130224,Capital Improvement
+2002,exp,948,365.11791098000003,Other Departments
+2002,exp,949,141.65180003999998,Other Boards & Commissions
+2002,exp,959,6631.720569550001,K-12 Education
+2002,exp,960,2673.18283949,University Education
+2002,exp,903,640.25704888,Debt Service
+2002,exp,970,4300.10066935,Local Govt Transfers
+2003,exp,402,303.9372733,Aging
+2003,exp,406,90.39480834999999,Agriculture
+2003,exp,416,492.77463824,Central Management
+2003,exp,418,1281.91899851,Children And Family Services
+2003,exp,420,829.50182164,Commerce And Economic Opportunity
+2003,exp,422,316.20991506,Natural Resources
+2003,exp,426,1173.4439894500001,Corrections
+2003,exp,427,377.17937207,Employment Security
+2003,exp,444,4410.23100287,Human Services
+2003,exp,478,297.952754,Family Services Net Medicaid
+2003,exp,482,241.49119933,Public Health
+2003,exp,492,560.9177307799999,Revenue
+2003,exp,494,3256.09034136,Transportation
+2003,exp,532,463.18215679,Environmental Protect Agency
+2003,exp,557,360.73293909,Il State Toll Highway Auth
+2003,exp,901,1662.01432424,State Pension Contribution
+2003,exp,904,1314.7476423,State Employee Healthcare
+2003,exp,910,72.29653344,Legislative
+2003,exp,920,360.69802439999995,Judicial
+2003,exp,930,551.0364459299999,Elected Officers
+2003,exp,941,502.22038373000004,Public Safety
+2003,exp,944,144.80324072,Bus & Profession Regulation
+2003,exp,945,7900.568223480001,Medicaid
+2003,exp,946,1075.84106993,Capital Improvement
+2003,exp,948,370.89420545,Other Departments
+2003,exp,949,90.14081893000001,Other Boards & Commissions
+2003,exp,959,6692.487175310001,K-12 Education
+2003,exp,960,2569.1776385300004,University Education
+2003,exp,903,731.2021835500001,Debt Service
+2003,exp,970,4119.48820917,Local Govt Transfers
+2004,exp,402,313.84670726,Aging
+2004,exp,406,82.17877873,Agriculture
+2004,exp,416,579.1402208,Central Management
+2004,exp,418,1251.76522313,Children And Family Services
+2004,exp,420,925.8957514800001,Commerce And Economic Opportunity
+2004,exp,422,275.85093077,Natural Resources
+2004,exp,426,1195.33124447,Corrections
+2004,exp,427,207.6243794,Employment Security
+2004,exp,444,4599.62862316,Human Services
+2004,exp,478,288.24236038,Family Services Net Medicaid
+2004,exp,482,264.28352049,Public Health
+2004,exp,492,830.82618297,Revenue
+2004,exp,494,2971.58746131,Transportation
+2004,exp,532,560.91563637,Environmental Protect Agency
+2004,exp,557,417.18865935,Il State Toll Highway Auth
+2004,exp,901,9133.61786058,State Pension Contribution
+2004,exp,904,1431.56501696,State Employee Healthcare
+2004,exp,910,72.56537508,Legislative
+2004,exp,920,355.85573671,Judicial
+2004,exp,930,522.82097694,Elected Officers
+2004,exp,941,473.33190695999997,Public Safety
+2004,exp,944,136.70617899,Bus & Profession Regulation
+2004,exp,945,10061.413063850001,Medicaid
+2004,exp,946,833.46807446,Capital Improvement
+2004,exp,948,92.13557883,Other Departments
+2004,exp,949,85.07983468,Other Boards & Commissions
+2004,exp,959,7127.60129257,K-12 Education
+2004,exp,960,2390.5662340999997,University Education
+2004,exp,903,1288.58426201,Debt Service
+2004,exp,970,4256.60560819,Local Govt Transfers
+2005,exp,402,402.26486306,Aging
+2005,exp,406,71.36042595,Agriculture
+2005,exp,416,709.78172758,Central Management
+2005,exp,418,1209.53077992,Children And Family Services
+2005,exp,420,421.60696681,Commerce And Economic Opportunity
+2005,exp,422,238.98210637,Natural Resources
+2005,exp,426,1172.78274506,Corrections
+2005,exp,427,190.33150361,Employment Security
+2005,exp,444,4687.61580896,Human Services
+2005,exp,478,475.79135018,Family Services Net Medicaid
+2005,exp,482,288.15293704000004,Public Health
+2005,exp,492,712.5914199299999,Revenue
+2005,exp,494,2626.02761057,Transportation
+2005,exp,532,379.32073474000003,Environmental Protect Agency
+2005,exp,557,479.32018221,Il State Toll Highway Auth
+2005,exp,901,1853.29860321,State Pension Contribution
+2005,exp,904,1522.69660054,State Employee Healthcare
+2005,exp,910,73.66496575,Legislative
+2005,exp,920,368.38813488,Judicial
+2005,exp,930,529.00482915,Elected Officers
+2005,exp,941,530.55712807,Public Safety
+2005,exp,944,172.29334942,Bus & Profession Regulation
+2005,exp,945,9529.546222559999,Medicaid
+2005,exp,946,581.60258988,Capital Improvement
+2005,exp,948,90.52925464,Other Departments
+2005,exp,949,92.09652734999999,Other Boards & Commissions
+2005,exp,959,7572.67212166,K-12 Education
+2005,exp,960,2354.89775299,University Education
+2005,exp,903,1351.8173164500001,Debt Service
+2005,exp,970,4674.178671850001,Local Govt Transfers
+2006,exp,402,420.41528929000003,Aging
+2006,exp,406,82.08503561,Agriculture
+2006,exp,416,689.36482638,Central Management
+2006,exp,418,1227.4817698999998,Children And Family Services
+2006,exp,420,593.88780962,Commerce And Economic Opportunity
+2006,exp,422,240.90985131,Natural Resources
+2006,exp,426,1187.3052301500002,Corrections
+2006,exp,427,200.49340141,Employment Security
+2006,exp,444,4810.77716171,Human Services
+2006,exp,478,719.9213894400001,Family Services Net Medicaid
+2006,exp,482,293.31122662,Public Health
+2006,exp,492,830.61384794,Revenue
+2006,exp,494,2762.87048777,Transportation
+2006,exp,532,376.86206382,Environmental Protect Agency
+2006,exp,557,1073.7547139,Il State Toll Highway Auth
+2006,exp,901,1062.2737355499999,State Pension Contribution
+2006,exp,904,1622.83187374,State Employee Healthcare
+2006,exp,910,76.02374542,Legislative
+2006,exp,920,334.85299815999997,Judicial
+2006,exp,930,587.78287936,Elected Officers
+2006,exp,941,599.67514171,Public Safety
+2006,exp,944,179.97384079,Bus & Profession Regulation
+2006,exp,945,10465.75244916,Medicaid
+2006,exp,946,492.8022843,Capital Improvement
+2006,exp,948,93.62007820000001,Other Departments
+2006,exp,949,159.00272721000002,Other Boards & Commissions
+2006,exp,959,7876.77796471,K-12 Education
+2006,exp,960,2381.2559651399997,University Education
+2006,exp,903,1415.45327269,Debt Service
+2006,exp,970,5203.7770244,Local Govt Transfers
+2007,exp,402,488.15850058999996,Aging
+2007,exp,406,83.02159876,Agriculture
+2007,exp,416,709.1554693400001,Central Management
+2007,exp,418,1242.99745841,Children And Family Services
+2007,exp,420,598.70945498,Commerce And Economic Opportunity
+2007,exp,422,261.78456206,Natural Resources
+2007,exp,426,1124.85810214,Corrections
+2007,exp,427,189.15823021,Employment Security
+2007,exp,444,4893.276761939999,Human Services
+2007,exp,478,675.80722333,Family Services Net Medicaid
+2007,exp,482,325.93120524,Public Health
+2007,exp,492,846.4447829599999,Revenue
+2007,exp,494,3000.98608659,Transportation
+2007,exp,532,415.50830613,Environmental Protect Agency
+2007,exp,557,1432.8793855899999,Il State Toll Highway Auth
+2007,exp,901,1496.87015163,State Pension Contribution
+2007,exp,904,1751.62380245,State Employee Healthcare
+2007,exp,910,81.61220353,Legislative
+2007,exp,920,344.75798605,Judicial
+2007,exp,930,642.0193064700001,Elected Officers
+2007,exp,941,738.96151491,Public Safety
+2007,exp,944,201.99113531,Bus & Profession Regulation
+2007,exp,945,11198.462198,Medicaid
+2007,exp,946,388.85284561000003,Capital Improvement
+2007,exp,948,102.69416896,Other Departments
+2007,exp,949,145.36909392,Other Boards & Commissions
+2007,exp,959,8269.43109392,K-12 Education
+2007,exp,960,2484.90532024,University Education
+2007,exp,903,1417.2083298799998,Debt Service
+2007,exp,970,5578.12285448,Local Govt Transfers
+2008,exp,402,526.5490850399999,Aging
+2008,exp,406,83.92208075,Agriculture
+2008,exp,416,721.63208492,Central Management
+2008,exp,418,1238.43819298,Children And Family Services
+2008,exp,420,438.17461413,Commerce And Economic Opportunity
+2008,exp,422,236.95390063999997,Natural Resources
+2008,exp,426,1170.37258852,Corrections
+2008,exp,427,193.05941675,Employment Security
+2008,exp,444,5104.35728531,Human Services
+2008,exp,478,686.19588115,Family Services Net Medicaid
+2008,exp,482,349.61818869999996,Public Health
+2008,exp,492,845.79959386,Revenue
+2008,exp,494,2796.8138719000003,Transportation
+2008,exp,532,396.79449946,Environmental Protect Agency
+2008,exp,557,1587.69669403,Il State Toll Highway Auth
+2008,exp,901,2099.29252033,State Pension Contribution
+2008,exp,904,1789.66790126,State Employee Healthcare
+2008,exp,910,80.04367520999999,Legislative
+2008,exp,920,355.69190012,Judicial
+2008,exp,930,655.35680036,Elected Officers
+2008,exp,941,743.47594039,Public Safety
+2008,exp,944,199.32421862,Bus & Profession Regulation
+2008,exp,945,12699.20047202,Medicaid
+2008,exp,946,261.10366582,Capital Improvement
+2008,exp,948,110.74066038,Other Departments
+2008,exp,949,118.80997533,Other Boards & Commissions
+2008,exp,959,8877.81716739,K-12 Education
+2008,exp,960,2519.23782579,University Education
+2008,exp,903,1414.2337261,Debt Service
+2008,exp,970,5873.26115267,Local Govt Transfers
+2009,exp,402,605.8792386499999,Aging
+2009,exp,406,76.79424644,Agriculture
+2009,exp,416,698.24796487,Central Management
+2009,exp,418,1245.2930475599999,Children And Family Services
+2009,exp,420,517.89638111,Commerce And Economic Opportunity
+2009,exp,422,218.61726002,Natural Resources
+2009,exp,426,1219.63546087,Corrections
+2009,exp,427,217.64145230000003,Employment Security
+2009,exp,444,5278.75901159,Human Services
+2009,exp,478,691.0586495,Family Services Net Medicaid
+2009,exp,482,350.11362122,Public Health
+2009,exp,492,866.10326248,Revenue
+2009,exp,494,2991.99931869,Transportation
+2009,exp,532,411.11934623,Environmental Protect Agency
+2009,exp,557,1599.27061967,Il State Toll Highway Auth
+2009,exp,901,2800.3355211599996,State Pension Contribution
+2009,exp,904,1770.02965118,State Employee Healthcare
+2009,exp,910,82.96979596999999,Legislative
+2009,exp,920,386.94904313,Judicial
+2009,exp,930,651.7437104500001,Elected Officers
+2009,exp,941,756.4113963200001,Public Safety
+2009,exp,944,211.57613392,Bus & Profession Regulation
+2009,exp,945,13826.58674312,Medicaid
+2009,exp,946,165.01668231,Capital Improvement
+2009,exp,948,108.8598915,Other Departments
+2009,exp,949,177.50172112,Other Boards & Commissions
+2009,exp,959,9373.42888669,K-12 Education
+2009,exp,960,2511.01732984,University Education
+2009,exp,903,1421.07800529,Debt Service
+2009,exp,970,5520.558796109999,Local Govt Transfers
+2010,exp,402,727.76948072,Aging
+2010,exp,406,80.74965711,Agriculture
+2010,exp,416,784.3394492699999,Central Management
+2010,exp,418,1231.19779724,Children And Family Services
+2010,exp,420,1176.48284956,Commerce And Economic Opportunity
+2010,exp,422,215.93285683000002,Natural Resources
+2010,exp,426,1225.29855175,Corrections
+2010,exp,427,250.38671764000003,Employment Security
+2010,exp,444,5391.83264831,Human Services
+2010,exp,478,456.82789949,Family Services Net Medicaid
+2010,exp,482,365.38124025,Public Health
+2010,exp,492,724.75031363,Revenue
+2010,exp,494,3703.43911386,Transportation
+2010,exp,532,523.29791133,Environmental Protect Agency
+2010,exp,557,1292.2441540799998,Il State Toll Highway Auth
+2010,exp,901,3352.19265717,State Pension Contribution
+2010,exp,904,1792.2102457199999,State Employee Healthcare
+2010,exp,910,84.19877295,Legislative
+2010,exp,920,387.78624246,Judicial
+2010,exp,930,631.13601559,Elected Officers
+2010,exp,941,775.6503651700001,Public Safety
+2010,exp,944,232.03205838,Bus & Profession Regulation
+2010,exp,945,14155.9385009,Medicaid
+2010,exp,946,213.24860784999998,Capital Improvement
+2010,exp,948,112.66413984,Other Departments
+2010,exp,949,349.07299386,Other Boards & Commissions
+2010,exp,959,9847.05714594,K-12 Education
+2010,exp,960,2606.76444766,University Education
+2010,exp,903,1387.92024044,Debt Service
+2010,exp,970,5194.19321064,Local Govt Transfers
+2011,exp,402,715.1087197200001,Aging
+2011,exp,406,71.97837896000001,Agriculture
+2011,exp,416,768.21648391,Central Management
+2011,exp,418,1212.50991499,Children And Family Services
+2011,exp,420,1157.73521944,Commerce And Economic Opportunity
+2011,exp,422,223.80794,Natural Resources
+2011,exp,426,1268.25513525,Corrections
+2011,exp,427,286.70133017,Employment Security
+2011,exp,444,5688.81017247,Human Services
+2011,exp,478,490.51363605,Family Services Net Medicaid
+2011,exp,482,312.49000277,Public Health
+2011,exp,492,749.56228586,Revenue
+2011,exp,494,4358.79869487,Transportation
+2011,exp,532,760.30463019,Environmental Protect Agency
+2011,exp,557,739.80110963,Il State Toll Highway Auth
+2011,exp,901,3381.4623321999998,State Pension Contribution
+2011,exp,904,1884.42773143,State Employee Healthcare
+2011,exp,910,83.75182303,Legislative
+2011,exp,920,365.12459701999995,Judicial
+2011,exp,930,645.09198688,Elected Officers
+2011,exp,941,797.75816749,Public Safety
+2011,exp,944,217.03501186,Bus & Profession Regulation
+2011,exp,945,14161.02022563,Medicaid
+2011,exp,946,364.70846998,Capital Improvement
+2011,exp,948,122.87327737000001,Other Departments
+2011,exp,949,374.89043461,Other Boards & Commissions
+2011,exp,959,9561.133293719999,K-12 Education
+2011,exp,960,2491.16417172,University Education
+2011,exp,903,1640.8520024000002,Debt Service
+2011,exp,970,5529.052197790001,Local Govt Transfers
+2012,exp,402,795.4911003499999,Aging
+2012,exp,406,69.76364573000001,Agriculture
+2012,exp,416,739.46873061,Central Management
+2012,exp,418,1190.79955408,Children And Family Services
+2012,exp,420,1026.1218293099998,Commerce And Economic Opportunity
+2012,exp,422,215.01717597,Natural Resources
+2012,exp,426,1278.17042926,Corrections
+2012,exp,427,230.44583538999998,Employment Security
+2012,exp,444,5246.26421915,Human Services
+2012,exp,478,515.50080011,Family Services Net Medicaid
+2012,exp,482,403.59836050999996,Public Health
+2012,exp,492,512.60066612,Revenue
+2012,exp,494,4317.35928662,Transportation
+2012,exp,532,640.0139991799999,Environmental Protect Agency
+2012,exp,557,698.72918798,Il State Toll Highway Auth
+2012,exp,901,4763.30443958,State Pension Contribution
+2012,exp,904,2353.706227,State Employee Healthcare
+2012,exp,910,100.08490721,Legislative
+2012,exp,920,386.59251265,Judicial
+2012,exp,930,676.07502435,Elected Officers
+2012,exp,941,783.54213474,Public Safety
+2012,exp,944,228.27692078,Bus & Profession Regulation
+2012,exp,945,12228.48252349,Medicaid
+2012,exp,946,616.3252273400001,Capital Improvement
+2012,exp,948,728.63252171,Other Departments
+2012,exp,949,326.11312167,Other Boards & Commissions
+2012,exp,959,8951.51668604,K-12 Education
+2012,exp,960,2490.71427996,University Education
+2012,exp,903,1784.8645659000001,Debt Service
+2012,exp,970,5568.990849299999,Local Govt Transfers
+2013,exp,402,1121.0722073,Aging
+2013,exp,406,69.55234591,Agriculture
+2013,exp,416,890.67455036,Central Management
+2013,exp,418,1136.6463996500001,Children And Family Services
+2013,exp,420,979.62269692,Commerce And Economic Opportunity
+2013,exp,422,231.35040547999998,Natural Resources
+2013,exp,426,1248.96883953,Corrections
+2013,exp,427,227.25283747,Employment Security
+2013,exp,444,5584.3246481099995,Human Services
+2013,exp,478,359.48150925,Family Services Net Medicaid
+2013,exp,482,357.7134801,Public Health
+2013,exp,492,412.80672923000003,Revenue
+2013,exp,494,4132.94676734,Transportation
+2013,exp,532,523.42118719,Environmental Protect Agency
+2013,exp,557,950.24235075,Il State Toll Highway Auth
+2013,exp,901,5688.68919052,State Pension Contribution
+2013,exp,904,2174.92617471,State Employee Healthcare
+2013,exp,910,120.57795939,Legislative
+2013,exp,920,352.50807242,Judicial
+2013,exp,930,680.0304490599999,Elected Officers
+2013,exp,941,828.8544314400001,Public Safety
+2013,exp,944,243.48618563999997,Bus & Profession Regulation
+2013,exp,945,14776.36709009,Medicaid
+2013,exp,946,528.8773000799999,Capital Improvement
+2013,exp,948,732.06452278,Other Departments
+2013,exp,949,276.63878429000005,Other Boards & Commissions
+2013,exp,959,8722.2484437,K-12 Education
+2013,exp,960,2306.5607324000002,University Education
+2013,exp,903,1802.85670795,Debt Service
+2013,exp,970,5828.579201660001,Local Govt Transfers
+2014,exp,402,993.6345765599999,Aging
+2014,exp,406,72.47230148999999,Agriculture
+2014,exp,416,903.15645861,Central Management
+2014,exp,418,1129.14244855,Children And Family Services
+2014,exp,420,1051.76127151,Commerce And Economic Opportunity
+2014,exp,422,263.23042145,Natural Resources
+2014,exp,426,1351.49152346,Corrections
+2014,exp,427,251.08554735,Employment Security
+2014,exp,444,5600.14806947,Human Services
+2014,exp,478,452.28582456,Family Services Net Medicaid
+2014,exp,482,460.39329391,Public Health
+2014,exp,492,480.30219593,Revenue
+2014,exp,494,4285.67548851,Transportation
+2014,exp,532,467.53463295,Environmental Protect Agency
+2014,exp,557,1423.40512143,Il State Toll Highway Auth
+2014,exp,901,6619.07551588,State Pension Contribution
+2014,exp,904,2625.89449946,State Employee Healthcare
+2014,exp,910,96.26091303,Legislative
+2014,exp,920,373.07615517,Judicial
+2014,exp,930,745.47815414,Elected Officers
+2014,exp,941,827.336456,Public Safety
+2014,exp,944,272.25731694999996,Bus & Profession Regulation
+2014,exp,945,15189.78782041,Medicaid
+2014,exp,946,737.03866399,Capital Improvement
+2014,exp,948,724.7829230499999,Other Departments
+2014,exp,949,262.99310400999997,Other Boards & Commissions
+2014,exp,959,8981.82443794,K-12 Education
+2014,exp,960,2376.34134307,University Education
+2014,exp,903,1920.01656271,Debt Service
+2014,exp,970,6030.58129638,Local Govt Transfers
+2015,exp,402,1031.9755591800001,Aging
+2015,exp,406,70.00167173,Agriculture
+2015,exp,416,860.49748529,Central Management
+2015,exp,418,1117.86477881,Children And Family Services
+2015,exp,420,993.7598186399999,Commerce And Economic Opportunity
+2015,exp,422,298.10899019,Natural Resources
+2015,exp,426,1382.1140050899999,Corrections
+2015,exp,427,218.49438684,Employment Security
+2015,exp,444,5872.34861588,Human Services
+2015,exp,478,394.8776347,Family Services Net Medicaid
+2015,exp,482,399.09104701999996,Public Health
+2015,exp,492,442.85503587,Revenue
+2015,exp,494,4344.79361597,Transportation
+2015,exp,532,626.3781617100001,Environmental Protect Agency
+2015,exp,557,1894.3990662200001,Il State Toll Highway Auth
+2015,exp,901,6719.10521412,State Pension Contribution
+2015,exp,904,2454.66639179,State Employee Healthcare
+2015,exp,910,90.72505298,Legislative
+2015,exp,920,396.58512546,Judicial
+2015,exp,930,802.1737679400001,Elected Officers
+2015,exp,941,773.16553128,Public Safety
+2015,exp,944,276.54183974,Bus & Profession Regulation
+2015,exp,945,16913.59457004,Medicaid
+2015,exp,946,749.41715153,Capital Improvement
+2015,exp,948,1088.18518914,Other Departments
+2015,exp,949,242.33232605,Other Boards & Commissions
+2015,exp,959,8906.215777149999,K-12 Education
+2015,exp,960,2285.2118553,University Education
+2015,exp,903,2014.55568518,Debt Service
+2015,exp,970,6283.47793569,Local Govt Transfers
+2016,exp,402,710.4086324,Aging
+2016,exp,406,55.451731159999994,Agriculture
+2016,exp,416,718.94904093,Central Management
+2016,exp,418,1086.91477397,Children And Family Services
+2016,exp,420,512.51323402,Commerce And Economic Opportunity
+2016,exp,422,162.70346392,Natural Resources
+2016,exp,426,951.33824847,Corrections
+2016,exp,427,205.40274234,Employment Security
+2016,exp,444,5035.80047107,Human Services
+2016,exp,478,322.37879783,Family Services Net Medicaid
+2016,exp,482,341.00264357,Public Health
+2016,exp,492,417.97020576,Revenue
+2016,exp,494,4143.81243145,Transportation
+2016,exp,532,802.5414628,Environmental Protect Agency
+2016,exp,557,2245.99601849,Il State Toll Highway Auth
+2016,exp,901,7309.21600574,State Pension Contribution
+2016,exp,904,478.67398667000003,State Employee Healthcare
+2016,exp,910,88.46375525,Legislative
+2016,exp,920,387.46478177,Judicial
+2016,exp,930,690.8194249500001,Elected Officers
+2016,exp,941,726.33873068,Public Safety
+2016,exp,944,196.56161147999998,Bus & Profession Regulation
+2016,exp,945,17034.82557192,Medicaid
+2016,exp,946,90.96402408,Capital Improvement
+2016,exp,948,672.16611062,Other Departments
+2016,exp,949,206.17036713,Other Boards & Commissions
+2016,exp,959,9334.06926366,K-12 Education
+2016,exp,960,867.54997086,University Education
+2016,exp,903,1906.0034094300001,Debt Service
+2016,exp,970,6231.73605521,Local Govt Transfers
+2017,exp,402,1256.19765898,Aging
+2017,exp,406,69.34993168999999,Agriculture
+2017,exp,416,1140.0056983,Central Management
+2017,exp,418,1076.27115386,Children And Family Services
+2017,exp,420,649.2998035700001,Commerce And Economic Opportunity
+2017,exp,422,219.72807243,Natural Resources
+2017,exp,426,1274.50315513,Corrections
+2017,exp,427,193.98612000999998,Employment Security
+2017,exp,444,5382.6269387,Human Services
+2017,exp,478,355.12242894999997,Family Services Net Medicaid
+2017,exp,482,366.77336163,Public Health
+2017,exp,492,495.28727991000005,Revenue
+2017,exp,494,3999.06785252,Transportation
+2017,exp,532,911.1420130800001,Environmental Protect Agency
+2017,exp,557,1763.57585644,Il State Toll Highway Auth
+2017,exp,901,7519.210361689999,State Pension Contribution
+2017,exp,904,3320.90217221,State Employee Healthcare
+2017,exp,910,88.74767435,Legislative
+2017,exp,920,421.1659758,Judicial
+2017,exp,930,730.50113272,Elected Officers
+2017,exp,941,816.8848743200001,Public Safety
+2017,exp,944,166.21668283000002,Bus & Profession Regulation
+2017,exp,945,17852.95398318,Medicaid
+2017,exp,946,253.79314911,Capital Improvement
+2017,exp,948,734.4173807100001,Other Departments
+2017,exp,949,211.69194276000002,Other Boards & Commissions
+2017,exp,959,9758.33682932,K-12 Education
+2017,exp,960,2391.16515622,University Education
+2017,exp,903,1851.63592052,Debt Service
+2017,exp,970,6459.7416522799995,Local Govt Transfers
+2018,exp,402,953.84799884,Aging
+2018,exp,406,84.16378461,Agriculture
+2018,exp,416,998.29086796,Central Management
+2018,exp,418,1084.8222748399999,Children And Family Services
+2018,exp,420,498.38432916,Commerce And Economic Opportunity
+2018,exp,422,241.39979723,Natural Resources
+2018,exp,426,1945.24027946,Corrections
+2018,exp,427,236.51142621,Employment Security
+2018,exp,444,5405.121710859999,Human Services
+2018,exp,478,380.88491195999995,Family Services Net Medicaid
+2018,exp,482,372.7731038,Public Health
+2018,exp,492,534.13442801,Revenue
+2018,exp,494,3389.16385154,Transportation
+2018,exp,532,892.8032080099999,Environmental Protect Agency
+2018,exp,557,1467.50758754,Il State Toll Highway Auth
+2018,exp,901,7642.69244659,State Pension Contribution
+2018,exp,904,5851.72845374,State Employee Healthcare
+2018,exp,910,89.44913764,Legislative
+2018,exp,920,429.78640634,Judicial
+2018,exp,930,834.67077166,Elected Officers
+2018,exp,941,889.37394453,Public Safety
+2018,exp,944,156.33061517,Bus & Profession Regulation
+2018,exp,945,18587.36222093,Medicaid
+2018,exp,946,222.21376053,Capital Improvement
+2018,exp,948,932.08728375,Other Departments
+2018,exp,949,211.52727471,Other Boards & Commissions
+2018,exp,959,10458.747310370001,K-12 Education
+2018,exp,960,2032.72897234,University Education
+2018,exp,903,1970.69456089,Debt Service
+2018,exp,970,6180.91691266,Local Govt Transfers
+2019,exp,402,987.61025364,Aging
+2019,exp,406,75.06594466,Agriculture
+2019,exp,416,936.26239795,Central Management
+2019,exp,418,1153.12736403,Children And Family Services
+2019,exp,420,576.2422491899999,Commerce And Economic Opportunity
+2019,exp,422,268.04656143,Natural Resources
+2019,exp,426,1578.8738285,Corrections
+2019,exp,427,221.36637786000003,Employment Security
+2019,exp,444,5593.04678799,Human Services
+2019,exp,478,462.76304456,Family Services Net Medicaid
+2019,exp,482,429.457377,Public Health
+2019,exp,492,602.95216484,Revenue
+2019,exp,494,3232.44735203,Transportation
+2019,exp,532,827.29743897,Environmental Protect Agency
+2019,exp,557,1751.0649049600001,Il State Toll Highway Auth
+2019,exp,901,8367.24882578,State Pension Contribution
+2019,exp,904,3151.8790617,State Employee Healthcare
+2019,exp,910,93.31638165999999,Legislative
+2019,exp,920,415.32178691,Judicial
+2019,exp,930,915.59545929,Elected Officers
+2019,exp,941,1001.65090523,Public Safety
+2019,exp,944,159.01702945,Bus & Profession Regulation
+2019,exp,945,19025.87600858,Medicaid
+2019,exp,946,254.8699971,Capital Improvement
+2019,exp,948,839.22246927,Other Departments
+2019,exp,949,221.65179170000002,Other Boards & Commissions
+2019,exp,959,10637.694804069999,K-12 Education
+2019,exp,960,2057.42346129,University Education
+2019,exp,903,2052.34078095,Debt Service
+2019,exp,970,6520.18424595,Local Govt Transfers
+2020,exp,402,1064.84687413,Aging
+2020,exp,406,71.28949677,Agriculture
+2020,exp,416,1190.46651677,Central Management
+2020,exp,418,1238.5849721700001,Children And Family Services
+2020,exp,420,620.21825366,Commerce And Economic Opportunity
+2020,exp,422,262.65736596,Natural Resources
+2020,exp,426,1534.12504123,Corrections
+2020,exp,427,236.52931031,Employment Security
+2020,exp,444,5963.63419623,Human Services
+2020,exp,478,315.07045367,Family Services Net Medicaid
+2020,exp,482,551.3317704299999,Public Health
+2020,exp,492,1137.26835598,Revenue
+2020,exp,494,3850.54609513,Transportation
+2020,exp,532,703.8987806800001,Environmental Protect Agency
+2020,exp,557,1917.63322051,Il State Toll Highway Auth
+2020,exp,901,9196.57211319,State Pension Contribution
+2020,exp,904,2981.81766794,State Employee Healthcare
+2020,exp,910,101.24143529,Legislative
+2020,exp,920,476.93785978,Judicial
+2020,exp,930,881.9409078100001,Elected Officers
+2020,exp,941,1475.7376508,Public Safety
+2020,exp,944,155.7229661,Bus & Profession Regulation
+2020,exp,945,22289.405404959998,Medicaid
+2020,exp,946,305.93522986,Capital Improvement
+2020,exp,948,977.35039305,Other Departments
+2020,exp,949,202.64005538,Other Boards & Commissions
+2020,exp,959,11303.71132139,K-12 Education
+2020,exp,960,2199.45145189,University Education
+2020,exp,903,1947.22765114,Debt Service
+2020,exp,970,6455.3859012,Local Govt Transfers
+2021,exp,402,1143.37217704,Aging
+2021,exp,406,66.06448521,Agriculture
+2021,exp,416,1191.345937,Central Management
+2021,exp,418,1303.11845608,Children And Family Services
+2021,exp,420,1676.31878603,Commerce And Economic Opportunity
+2021,exp,422,273.35346255,Natural Resources
+2021,exp,426,1610.55407717,Corrections
+2021,exp,427,327.40724113,Employment Security
+2021,exp,444,6516.02097841,Human Services
+2021,exp,478,356.06108125,Family Services Net Medicaid
+2021,exp,482,934.59427914,Public Health
+2021,exp,492,1692.91340263,Revenue
+2021,exp,494,5141.109349480001,Transportation
+2021,exp,532,658.92265417,Environmental Protect Agency
+2021,exp,557,1963.23937193,Il State Toll Highway Auth
+2021,exp,901,9769.23685549,State Pension Contribution
+2021,exp,904,2881.4015127,State Employee Healthcare
+2021,exp,910,105.96270129999999,Legislative
+2021,exp,920,517.7267073,Judicial
+2021,exp,930,945.55739463,Elected Officers
+2021,exp,941,1994.9761647,Public Safety
+2021,exp,944,162.13522853999999,Bus & Profession Regulation
+2021,exp,945,26277.16957997,Medicaid
+2021,exp,946,451.71068356,Capital Improvement
+2021,exp,948,1105.65352495,Other Departments
+2021,exp,949,238.93826964,Other Boards & Commissions
+2021,exp,959,12177.217104219999,K-12 Education
+2021,exp,960,2204.84448277,University Education
+2021,exp,903,2026.26050134,Debt Service
+2021,exp,970,7178.371065359999,Local Govt Transfers
+2022,exp,402,1174.10826943,Aging
+2022,exp,406,88.81932408,Agriculture
+2022,exp,416,1158.54710622,Central Management
+2022,exp,418,1252.33055449,Children And Family Services
+2022,exp,420,1391.12864775,Commerce And Economic Opportunity
+2022,exp,422,273.02502529000003,Natural Resources
+2022,exp,426,1502.11068704,Corrections
+2022,exp,427,274.72413502,Employment Security
+2022,exp,444,7241.17503255,Human Services
+2022,exp,478,337.75671674,Family Services Net Medicaid
+2022,exp,482,829.0765704400001,Public Health
+2022,exp,492,1847.48249544,Revenue
+2022,exp,494,4323.9121826400005,Transportation
+2022,exp,532,637.25541,Environmental Protect Agency
+2022,exp,557,2101.83432449,Il State Toll Highway Auth
+2022,exp,901,10760.381108739999,State Pension Contribution
+2022,exp,904,3005.2094902100002,State Employee Healthcare
+2022,exp,910,126.68992539,Legislative
+2022,exp,920,505.84419491999995,Judicial
+2022,exp,930,978.71464072,Elected Officers
+2022,exp,941,1709.1710537000001,Public Safety
+2022,exp,944,172.80732555,Bus & Profession Regulation
+2022,exp,945,28651.80652707,Medicaid
+2022,exp,946,421.18977548000004,Capital Improvement
+2022,exp,948,1071.38066438,Other Departments
+2022,exp,949,235.64674893,Other Boards & Commissions
+2022,exp,959,13378.73663933,K-12 Education
+2022,exp,960,2265.26850216,University Education
+2022,exp,903,2009.4535459299998,Debt Service
+2022,exp,970,10347.07955976,Local Govt Transfers
+2023,exp,402,1379.6857743,Aging
+2023,exp,406,88.52859606,Agriculture
+2023,exp,416,1364.16771371,Central Management
+2023,exp,418,1577.7599308699998,Children And Family Services
+2023,exp,420,1498.4197034200001,Commerce And Economic Opportunity
+2023,exp,422,307.961544,Natural Resources
+2023,exp,426,1704.2905444,Corrections
+2023,exp,427,270.89516165000003,Employment Security
+2023,exp,444,8796.025157459999,Human Services
+2023,exp,478,386.6583548,Family Services Net Medicaid
+2023,exp,482,759.48210482,Public Health
+2023,exp,492,3093.09190433,Revenue
+2023,exp,494,5055.68872781,Transportation
+2023,exp,532,606.75610147,Environmental Protect Agency
+2023,exp,557,1893.92975523,Il State Toll Highway Auth
+2023,exp,901,11049.544083379998,State Pension Contribution
+2023,exp,904,3002.3629412,State Employee Healthcare
+2023,exp,910,211.52033796,Legislative
+2023,exp,920,610.36328483,Judicial
+2023,exp,930,1057.59142758,Elected Officers
+2023,exp,941,1730.0890432,Public Safety
+2023,exp,944,185.85761890999999,Bus & Profession Regulation
+2023,exp,945,32406.41271788,Medicaid
+2023,exp,946,646.32053691,Capital Improvement
+2023,exp,948,1876.8228437100001,Other Departments
+2023,exp,949,317.21209686000003,Other Boards & Commissions
+2023,exp,959,14697.91211539,K-12 Education
+2023,exp,960,2549.4587532399996,University Education
+2023,exp,903,1951.4366831900002,Debt Service
+2023,exp,970,10901.30023769,Local Govt Transfers
+2024,exp,402,1542.13473348,Aging
+2024,exp,406,108.62024284,Agriculture
+2024,exp,416,1397.043102,Central Management
+2024,exp,418,1794.05932143,Children And Family Services
+2024,exp,420,1610.6006553599998,Commerce And Economic Opportunity
+2024,exp,422,364.88404441,Natural Resources
+2024,exp,426,1828.03721297,Corrections
+2024,exp,427,265.77943516,Employment Security
+2024,exp,444,10431.14107902,Human Services
+2024,exp,478,424.74929937,Family Services Net Medicaid
+2024,exp,482,722.53031929,Public Health
+2024,exp,492,1364.33726518,Revenue
+2024,exp,494,5648.360376060001,Transportation
+2024,exp,532,870.7226042899999,Environmental Protect Agency
+2024,exp,557,1976.80223428,Il State Toll Highway Auth
+2024,exp,901,10952.22250429,State Pension Contribution
+2024,exp,904,3162.77220997,State Employee Healthcare
+2024,exp,910,216.64444975,Legislative
+2024,exp,920,644.39024468,Judicial
+2024,exp,930,1187.17898576,Elected Officers
+2024,exp,941,2166.93542723,Public Safety
+2024,exp,944,205.02335186000002,Bus & Profession Regulation
+2024,exp,945,33440.83506686,Medicaid
+2024,exp,946,821.44547499,Capital Improvement
+2024,exp,948,1554.38446126,Other Departments
+2024,exp,949,337.81893869,Other Boards & Commissions
+2024,exp,959,15142.782207040002,K-12 Education
+2024,exp,960,2881.9840656399997,University Education
+2024,exp,903,2288.36071001,Debt Service
+2024,exp,970,9655.795549550001,Local Govt Transfers

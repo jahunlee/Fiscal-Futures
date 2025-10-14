@@ -1,14 +1,17 @@
 ---
 title: "FF Manual"
-format: html
-editor: visual
+format:
   html:
-    toc: true          # 목차 활성화
-    toc-location: left # 왼쪽에 고정 (right도 가능)
+    toc: true
+    toc-location: left
     toc-title: "Contents"
 ---
 
-## Table of Contents
+
+This page is an attempt to bring together information about the Fiscal Futures Project in one place.
+For me, it's difficult to understand the project because it feels so large and the information seems  scattered across many places (though maybe it isn't, really).
+
+## Table of Contents (will be deleted once it is done)
 
 -   [Introduction](#introduction)
 -   [Requesting Data from the IOC](#requesting-data-from-the-ioc)
@@ -29,6 +32,8 @@ editor: visual
             -   [Revenue Category](#revenue-category)
                 -   [Federal to State Transfers](#federal-to-state-transfers)
             -   [Not included in Fiscal Futures:](#not-included-in-fiscal-futures)
+-   [Reporting](#Reporting)
+
 
 # Introduction {#introduction}
 
@@ -475,16 +480,37 @@ Revenue categories are aggregated under the following revenue type codes. \>\[!C
     
 # Reporting
 
-1. Calculating the Fiscal Gap3  Pension Costs Included within Department Expenditures
-2. Illinois State Budget Data
-3. Own Source Revenue
-4. Federal Revenue
-5. Local Transfers
-6. Medicaid
-7. Debt Service Discussion
-8. Pensions
-9. State Employee Healthcare Discussion
-10. Tax Refunds
-11. K-12 Spending & ESSER Funds
-12. Federal COVID Money Received
+
+
+
+- `exp_fy2024_recoded.csv`
+- `rev_fy2024_recoded.csv`
+
+- Long version: 
+  - `expenditures_recoded_long2024.csv`
+  - `revenue_recoded_long2024.csv`
+
+
+- 
+  - `summary_file_FY24_wTotals_2025_02_06.xlsx`
+
+[View code lines 45–60 of summary_generation.R](Files/Everything.qmd#L2249-L2279)
+
+
+
+
+1. Calculating the Fiscal Gap
+2. Pension Costs Included within Department Expenditures
+3. Illinois State Budget Data
+4. Own Source Revenue
+5. Federal Revenue
+6. Local Transfers
+7. Medicaid
+8. Debt Service Discussion
+9. Pensions
+10. State Employee Healthcare Discussion
+11. Tax Refunds
+12. K-12 Spending & ESSER Funds
+13. Federal COVID Money Received
+
 

@@ -5,9 +5,6 @@ format:
     toc: true
     toc-location: left
     toc-title: "Contents"
-execute:
-  tidy: false
-
 ---
 
 
@@ -483,22 +480,29 @@ Revenue categories are aggregated under the following revenue type codes. \>\[!C
     
 # Reporting
 
+- `exp_fy20**_recoded.csv`, `rev_fy20**_recoded.csv` : Data from FY1998 after data processing
+[View code in `Everything.qmd`](https://github.com/jahunlee/Fiscal-Futures/blob/5291c2791984b1819f938ef2e7a31b3f04c1bbd2/Files/Everything.qmd#L885-L886)
 
 
-
-- `exp_fy2024_recoded.csv`
-- `rev_fy2024_recoded.csv`
 
 - Long version: 
-  - `expenditures_recoded_long2024.csv`
-  - `revenue_recoded_long2024.csv`
-
+  - `expenditures_recoded_long2024.csv`, `revenue_recoded_long2024.csv` : Data from FY1998 after data processing, pivoted to a long format containing fiscal year, category, and dollar amounts.
+[View code in `Everything.qmd`](https://github.com/jahunlee/Fiscal-Futures/blob/5291c2791984b1819f938ef2e7a31b3f04c1bbd2/Files/Everything.qmd#L901-L1172)
 
 - 
-  - `summary_file_FY24_wTotals_2025_02_06.xlsx`
+  - `summary_file_FY24_wTotals_2025_02_06.xlsx` " Summary workbook containing data (FY1998~FY2024)
 
-[View code lines 45–60 of summary_generation.R](Files/Everything.qmd#L2249-L2279)
 
+[View code lines 2247–2279 of `Everything.qmd`](https://github.com/jahunlee/Fiscal-Futures/blob/5291c2791984b1819f938ef2e7a31b3f04c1bbd2/Files/Everything.qmd#L2247-L2279)
+
+  - Table 1 (Main Revenues): Top 10 revenue categories, 1-year change,  `r as.numeric(format(Sys.Date(), "%Y")) - 1998` CAGR
+  - Table 2 (Main Expenditures): Top 13 expenditure categories, 1-year change, with  `r as.numeric(format(Sys.Date(), "%Y")) - 1998`-year CAGR
+  - Appendix 1. AllCats: All revenue categories—1-year change table (USD billions), with 26-year CAGR
+  - Appendix 2. AllCats: All expenditure categories—1-year change table (USD billions), with 26-year CAGR
+  - CAGR Rev-MajorCats: Major revenue categories—1·2·3·5·10·26-year CAGR summary
+  - CAGR Exp-MajorCats: Major expenditure categories—1·2·3·5·10·26-year CAGR summary
+  - Fiscal Gap: Yearly total revenues, total expenditures, and fiscal gap (source data)
+  - aggregated_totals_long: Long/tidy format for charts/pivots (Year × Category × Dollars, nominal millions)
 
 
 

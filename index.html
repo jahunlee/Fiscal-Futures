@@ -234,20 +234,55 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="wrangling-data" class="level1">
 <h1>Wrangling Data</h1>
-<blockquote class="blockquote">
-<p>[!NOTE] 0. Raw data 1. Raw Data after Consistency Process - <strong>allrevfiles.xlsx</strong>, <strong>allexpfiles.xlsx</strong>: Raw data from IOC<br>
-- <strong>funds_ab_in.xlsx</strong>: Funds information used since 1998, created by FF<br>
-- Contains all funds that have existed, their current status, whether fund numbers have been reused for different purposes, and the new fund numbers assigned each year by the IOC.<br>
-- <strong>ioc_source_type.xlsx</strong>: Source-type information, created by FF 2. FF Data after Recoding Variables - <code>rev_allyears.csv</code>, <code>exp_allyears.csv</code><br>
-- Initial combined data files, merged with <code>funds_ab_in.xlsx</code> and <code>ioc_source_type.xlsx</code><br>
-- Cleaned version before aggregating totals or dropping observations not included in the FF fiscal gap calculation<br>
-- Contain all years in one file<br>
-- Funds and agencies have numeric IDs and consistent labels<br>
-- Include the “Group” variable used to calculate expenditures by function in the FF Annual Report<br>
-- <code>rev_temp.csv</code>, <code>exp_temp.csv</code>: Prepared for the FF Annual Report<br>
-- Cleaned and coded up to the point just before aggregating category totals<br>
-- Drops observations excluded from the fiscal gap calculation 3. Final Outputs for Reporting - <code>summary_file_FY20XX.xlsx</code></p>
-</blockquote>
+<div class="callout callout-style-default callout-note callout-titled" title="Generated Files">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Generated Files
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="0" type="1">
+<li><p>Raw data</p></li>
+<li><p>Raw Data after Consistency Process</p></li>
+</ol>
+<ul>
+<li><strong>allrevfiles.xlsx</strong>, <strong>allexpfiles.xlsx</strong>: Raw data from IOC</li>
+<li><strong>funds_ab_in.xlsx</strong>: Funds info since 1998 (by FF)
+<ul>
+<li>Contains all funds, current status, number reuse, new fund numbers by IOC each year</li>
+</ul></li>
+<li><strong>ioc_source_type.xlsx</strong>: Source-type info (by FF)</li>
+</ul>
+<ol start="2" type="1">
+<li>FF Data after Recoding Variables</li>
+</ol>
+<ul>
+<li><code>rev_allyears.csv</code>, <code>exp_allyears.csv</code>
+<ul>
+<li>Merged with <code>funds_ab_in.xlsx</code>, <code>ioc_source_type.xlsx</code></li>
+<li>Cleaned before aggregating totals / dropping non-FF-gap obs</li>
+<li>All years in one file; consistent IDs/labels; includes “Group” variable</li>
+</ul></li>
+<li><code>rev_temp.csv</code>, <code>exp_temp.csv</code>
+<ul>
+<li>Cleaned/coded up to just before category aggregation</li>
+<li>Drops obs excluded from fiscal gap calculation</li>
+</ul></li>
+</ul>
+<ol start="3" type="1">
+<li>Final Outputs for Reporting</li>
+</ol>
+<ul>
+<li><code>summary_file_FY20XX.xlsx</code></li>
+</ul>
+</div>
+</div>
+</div>
 <section id="data-integration-and-consistency-check-allrevfiles_span-classcur-yearsspan.csv-and-allexpfiles_span-classcur-yearsspan.csv" class="level3">
 <h3 class="anchored" data-anchor-id="data-integration-and-consistency-check-allrevfiles_span-classcur-yearsspan.csv-and-allexpfiles_span-classcur-yearsspan.csv">1. Data Integration and Consistency Check (<code>allrevfiles_&lt;span class="cur-years"&gt;&lt;/span&gt;.csv</code> and <code>allexpfiles_&lt;span class="cur-years"&gt;&lt;/span&gt;.csv</code>)</h3>
 <p>Usually, the raw data from the IOC is inconsistent with past years. Therefore, make sure that the data consistency, through the following process:</p>

@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#gathering-data" id="toc-gathering-data" class="nav-link" data-scroll-target="#gathering-data">Gathering Data</a></li>
   <li><a href="#wrangling-data" id="toc-wrangling-data" class="nav-link" data-scroll-target="#wrangling-data">Wrangling Data</a>
   <ul class="collapse">
-  <li><a href="#data-integration-and-consistency-check-allrevfiles_span-classcur-yearsspan.csv-and-allexpfiles_span-classcur-yearsspan.csv" id="toc-data-integration-and-consistency-check-allrevfiles_span-classcur-yearsspan.csv-and-allexpfiles_span-classcur-yearsspan.csv" class="nav-link" data-scroll-target="#data-integration-and-consistency-check-allrevfiles_span-classcur-yearsspan.csv-and-allexpfiles_span-classcur-yearsspan.csv">1. Data Integration and Consistency Check (<code>allrevfiles_&lt;span class="cur-years"&gt;&lt;/span&gt;.csv</code> and <code>allexpfiles_&lt;span class="cur-years"&gt;&lt;/span&gt;.csv</code>)</a></li>
+  <li><a href="#data-integration-and-consistency-check-allrevfiles_.csv-and-allexpfiles_.csv" id="toc-data-integration-and-consistency-check-allrevfiles_.csv-and-allexpfiles_.csv" class="nav-link" data-scroll-target="#data-integration-and-consistency-check-allrevfiles_.csv-and-allexpfiles_.csv">1. Data Integration and Consistency Check (allrevfiles_<span class="cur-years"></span>.csv and allexpfiles_<span class="cur-years"></span>.csv)</a></li>
   <li><a href="#recoding-data" id="toc-recoding-data" class="nav-link" data-scroll-target="#recoding-data">2. Recoding data</a></li>
   </ul></li>
   <li><a href="#reporting" id="toc-reporting" class="nav-link" data-scroll-target="#reporting">Reporting</a></li>
@@ -283,8 +283,8 @@ Generated Files
 </div>
 </div>
 </div>
-<section id="data-integration-and-consistency-check-allrevfiles_span-classcur-yearsspan.csv-and-allexpfiles_span-classcur-yearsspan.csv" class="level3">
-<h3 class="anchored" data-anchor-id="data-integration-and-consistency-check-allrevfiles_span-classcur-yearsspan.csv-and-allexpfiles_span-classcur-yearsspan.csv">1. Data Integration and Consistency Check (<code>allrevfiles_&lt;span class="cur-years"&gt;&lt;/span&gt;.csv</code> and <code>allexpfiles_&lt;span class="cur-years"&gt;&lt;/span&gt;.csv</code>)</h3>
+<section id="data-integration-and-consistency-check-allrevfiles_.csv-and-allexpfiles_.csv" class="level3">
+<h3 class="anchored" data-anchor-id="data-integration-and-consistency-check-allrevfiles_.csv-and-allexpfiles_.csv">1. Data Integration and Consistency Check (allrevfiles_<span class="cur-years"></span>.csv and allexpfiles_<span class="cur-years"></span>.csv)</h3>
 <p>Usually, raw data from the IOC is inconsistent with prior years. Therefore, ensure data consistency through the following process:</p>
 <ol type="1">
 <li><strong>Identify new or reused entities</strong>
@@ -308,7 +308,7 @@ Generated Files
 </ul></li>
 <li><strong>Generate deliverables</strong>
 <ul>
-<li><code>allrevfiles_&lt;span class="cur-years"&gt;&lt;/span&gt;.csv</code> and <code>allexpfiles_&lt;span class="cur-years"&gt;&lt;/span&gt;.csv</code></li>
+<li>allrevfiles_<span class="cur-years"></span>.csv and allexpfiles_<span class="cur-years"></span>.csv</li>
 </ul></li>
 </ol>
 <div class="{=html}">
@@ -325,51 +325,156 @@ Generated Files
 </section>
 <section id="categorization" class="level4">
 <h4 class="anchored" data-anchor-id="categorization">2.2. Categorization</h4>
-==I plan to make a table or visualization for categorization== ##### 2.2.1. Expenditure In the Fiscal Futures (FF) project, the expenditures of the State of Illinois are classified by policy domain. The expenditure categories are organized into three types: - <strong>Single Agency</strong>: In most cases, the expenditure category corresponds directly to the name of a single bureau such as a <em>department</em>, <em>agency</em>, <em>branch</em>, <em>board</em>, or <em>commission</em>.
-<details>
-<summary>
-<strong>Single Agency</strong>
-</summary>
-<blockquote class="blockquote">
+<p>==I plan to make a table or visualization for categorization==</p>
+<section id="expenditure" class="level5">
+<h5 class="anchored" data-anchor-id="expenditure">2.2.1. Expenditure</h5>
+<p>In the Fiscal Futures (FF) project, the expenditures of the State of Illinois are classified by policy domain. The expenditure categories are organized into three types: - <strong>Single Agency</strong>: In most cases, the expenditure category corresponds directly to the name of a single bureau such as a <em>department</em>, <em>agency</em>, <em>branch</em>, <em>board</em>, or <em>commission</em>.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Single Agnecy">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Single Agnecy
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <ul>
-<li>402.&nbsp; Aging, Department of</li>
-<li>406.&nbsp; Agriculture, Department of (includes: 538. Farm Development Authority; 556 Rural Bond Bank – old agencies)</li>
-<li>418.&nbsp; Children and Family Services, Department of</li>
-<li>420.&nbsp; Commerce and Economic Opportunity,&nbsp;Department of</li>
-<li>422.&nbsp; Natural Resources, Department of</li>
+<li><ol start="402" type="1">
+<li>Aging, Department of</li>
+</ol></li>
+<li><ol start="406" type="1">
+<li>Agriculture, Department of (includes: 538. Farm Development Authority; 556 Rural Bond Bank – old agencies)</li>
+</ol></li>
+<li><ol start="418" type="1">
+<li>Children and Family Services, Department of</li>
+</ol></li>
+<li><ol start="420" type="1">
+<li>Commerce and Economic Opportunity,&nbsp;Department of</li>
+</ol></li>
+<li><ol start="422" type="1">
+<li>Natural Resources, Department of</li>
+</ol></li>
 <li><ol start="425" type="1">
 <li>Juvenile Justice,&nbsp;Department of</li>
 </ol></li>
-<li>426.&nbsp; Corrections, Department of</li>
-<li>427.&nbsp; Employment Security, Department of</li>
-<li>444.&nbsp; Human Services, Department of</li>
-<li>478.&nbsp; Healthcare &amp; Family Services, Department of (net of 945. Medicaid)</li>
-<li>482.&nbsp; Public Health, Department of</li>
-<li>492.&nbsp; Revenue, Department of</li>
-<li>494.&nbsp; Transportation&nbsp;(net Local Share)– e.g.&nbsp;public transportation, railroads, construction, equipment, maintenance</li>
-<li>532.&nbsp; Environmental Protect Agency&nbsp;– e.g.&nbsp;Air pollution control, land pollution control, clean water programs, stormwater management.</li>
-<li>557.&nbsp; Illinois State Toll Highway Authority&nbsp;– e.g.&nbsp;&nbsp;tollway capital Improvement, maintenance. Principal and interest are included as Tollway expenditures since they are combined in the data.</li>
-<li>684.&nbsp; Illinois Community College Board</li>
-<li>691.&nbsp; Illinois Student Assistance Commission
-</li></ul></blockquote></details>
-
-
-<ul>
-<li><p><strong>Quasi-Agency</strong>: Refers to categories that combine expenditures from multiple related agencies or programs that operate under shared policy functions. &gt;[!Quasi-Agency]- &gt;- <del>901. Pension contribution</del> &gt;- 903. Debt Service &gt;- 904. State Employee Health Care &gt;- 945. Medicaid &gt;- 970. Transfer of Revenue to Local Governments</p></li>
-<li><p><strong>Combination of Small Agencies</strong>: aggregated expenditures from several small agencies that are too minor to be analyzed individually. &gt;[!Combination of Small Agencies]- &gt;- <strong>943. Central Services</strong> &gt;- <strong>910.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Legislative</strong> &gt;- <strong>920.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Judicial</strong> &gt;- <strong>930.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Elected Officers</strong> &gt;- <strong>941.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Public Safety</strong> &gt;- <strong>944.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Business &amp; Professional Regulation</strong>. &gt;- <strong>946.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Capital Improvement</strong>. &gt;- <strong>948.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other Departments</strong>. &gt;- <strong>949.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other Boards &amp; Commissions</strong>. &gt;- <strong>959. K-12 Education</strong> &gt;- <strong>960.&nbsp;University Education.</strong></p></li>
+<li><ol start="426" type="1">
+<li>Corrections, Department of</li>
+</ol></li>
+<li><ol start="427" type="1">
+<li>Employment Security, Department of</li>
+</ol></li>
+<li><ol start="444" type="1">
+<li>Human Services, Department of</li>
+</ol></li>
+<li><ol start="478" type="1">
+<li>Healthcare &amp; Family Services, Department of (net of 945. Medicaid)</li>
+</ol></li>
+<li><ol start="482" type="1">
+<li>Public Health, Department of</li>
+</ol></li>
+<li><ol start="492" type="1">
+<li>Revenue, Department of</li>
+</ol></li>
+<li><ol start="494" type="1">
+<li>Transportation&nbsp;(net Local Share)– e.g.&nbsp;public transportation, railroads, construction, equipment, maintenance</li>
+</ol></li>
+<li><ol start="532" type="1">
+<li>Environmental Protect Agency&nbsp;– e.g.&nbsp;Air pollution control, land pollution control, clean water programs, stormwater management.</li>
+</ol></li>
+<li><ol start="557" type="1">
+<li>Illinois State Toll Highway Authority&nbsp;– e.g.tollway capital Improvement, maintenance. Principal and interest are included as Tollway expenditures since they are combined in the data.</li>
+</ol></li>
+<li><ol start="684" type="1">
+<li>Illinois Community College Board</li>
+</ol></li>
+<li><ol start="691" type="1">
+<li>Illinois Student Assistance Commission
+</li>
+</ol></li>
 </ul>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Quasi-Agency</strong>: Refers to categories that combine expenditures from multiple related agencies or programs that operate under shared policy functions.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Quasi-Agency">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Quasi-Agency
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><del>901. Pension contribution</del></li>
+<li><ol start="903" type="1">
+<li>Debt Service</li>
+</ol></li>
+<li><ol start="904" type="1">
+<li>State Employee Health Care</li>
+</ol></li>
+<li><ol start="945" type="1">
+<li>Medicaid</li>
+</ol></li>
+<li><ol start="970" type="1">
+<li>Transfer of Revenue to Local Governments</li>
+</ol></li>
+</ul>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Combination of Small Agencies</strong>: aggregated expenditures from several small agencies that are too minor to be analyzed individually.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Combination of Small Agencies">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Combination of Small Agencies
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>943. Central Services</strong></li>
+<li><strong>910. Legislative</strong></li>
+<li><strong>920. Judicial</strong></li>
+<li><strong>930. Elected Officers</strong></li>
+<li><strong>941. Public Safety</strong></li>
+<li><strong>944. Business &amp; Professional Regulation</strong>.</li>
+<li><strong>946. Capital Improvement</strong>.</li>
+<li><strong>948. Other Departments</strong>.</li>
+<li><strong>949. Other Boards &amp; Commissions</strong>.</li>
+<li><strong>959. K-12 Education</strong></li>
+<li><strong>960. University Education.</strong></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
 <section id="revenue" class="level5">
 <h5 class="anchored" data-anchor-id="revenue">2.2.2. Revenue</h5>
-<p>Revenue categories are aggregated under the following revenue type codes. - <strong>02.&nbsp; Individual Income Taxes</strong>.&nbsp; - Gross of local share.&nbsp; - Excludes funds allocated to Income Tax Refund Fund (0278) and the Protest Fund. - <strong>03.&nbsp; Corporate Income Taxes</strong> - Gross of the personal property replacement tax levied on businesses.&nbsp; - Excludes funds allocated to Income Tax Refund Fund (0278). - <strong>06.&nbsp; Sales Taxes</strong> - Collections of the general sales and use tax at the 6.25 percent rate—1.25 of which is remitted to local governments and 5.00 of which is retained by the state.&nbsp; - The Fiscal Futures project does not include the collections at the 1.0 percent rate that applies only to food and drugs and goes to local governments (deposited in the State and Local Sales Tax Reform Fund). - <strong>09.&nbsp; Motor Fuel Tax</strong>.&nbsp; - Gross of the portion transferred to local governments.&nbsp; - Net of current-year expenditures for refunds.&nbsp; - <strong>12.&nbsp; Public Utility Taxes</strong>.&nbsp; - Gross of the Personal Property Replacement Tax on public utilities that is transferred to local governments.&nbsp; - <strong>15.&nbsp; Cigarette Taxes</strong>.&nbsp; - <strong>18.&nbsp; Liquor Gallonage Taxes</strong>.&nbsp; - <strong>21.&nbsp; Inheritance Tax</strong>: Net of current-year expenditures for refunds. - <strong>24.&nbsp; Insurance Taxes, Fees &amp; Licenses</strong>: Net of current-year expenditures for refunds. - <strong>27.&nbsp; Corporate Franchise Taxes &amp; Fees</strong><br>
-- <strong>31.&nbsp; Medical Provider Assessments</strong><br>
-- <strong>33.&nbsp; Lottery Receipts</strong><br>
-- <strong>35.&nbsp; Other Taxes</strong><br>
-- <strong>36.&nbsp; Receipts From Revenue Producing</strong><br>
-- <strong>39.&nbsp; Licenses, Fees &amp; Registrations</strong><br>
-- <strong>42.&nbsp; Motor Vehicle &amp; Operators</strong>&nbsp;<br>
-- <strong>48.&nbsp; Riverboat Wagering Taxes</strong>&nbsp;<br>
-- <strong>54.&nbsp; Gifts and Bequests</strong>&nbsp;<br>
-- <strong>78.&nbsp; All Other Sources</strong>: include the following smaller sources - 30.&nbsp; Horse Racing Taxes &amp; Fees.&nbsp; - 60.&nbsp; Other Grants and Contracts.&nbsp; - 63.&nbsp; Investment Income.&nbsp; - <strong>58.&nbsp; Federal Medicaid</strong>: federal receipts of the Department of Healthcare and Family Services (agency 478) attributable to Medicaid. <code>agency = 478 &amp; source =&nbsp;0618,&nbsp;2364,&nbsp;0660,&nbsp;1552,&nbsp;2306,&nbsp;2076,&nbsp;0676, 0692</code> - <strong>59.&nbsp; Federal Transportation</strong>: Federal receipts of the Department of Transportation (<code>agency=494</code>) - <strong>57.&nbsp; Federal Other</strong>:&nbsp;All federal sources except for above two categories (<code>rev_type = 57</code>)</p>
+<p>Revenue categories are aggregated under the following revenue type codes. - <strong>02. Individual Income Taxes</strong>.&nbsp; - Gross of local share.&nbsp; - Excludes funds allocated to Income Tax Refund Fund (0278) and the Protest Fund. - <strong>03. Corporate Income Taxes</strong> - Gross of the personal property replacement tax levied on businesses.&nbsp; - Excludes funds allocated to Income Tax Refund Fund (0278). - <strong>06. Sales Taxes</strong> - Collections of the general sales and use tax at the 6.25 percent rate—1.25 of which is remitted to local governments and 5.00 of which is retained by the state.&nbsp; - The Fiscal Futures project does not include the collections at the 1.0 percent rate that applies only to food and drugs and goes to local governments (deposited in the State and Local Sales Tax Reform Fund). - <strong>09. Motor Fuel Tax</strong>.&nbsp; - Gross of the portion transferred to local governments.&nbsp; - Net of current-year expenditures for refunds.&nbsp; - <strong>12. Public Utility Taxes</strong>.&nbsp; - Gross of the Personal Property Replacement Tax on public utilities that is transferred to local governments.&nbsp; - <strong>15. Cigarette Taxes</strong>.&nbsp; - <strong>18. Liquor Gallonage Taxes</strong>.&nbsp; - <strong>21. Inheritance Tax</strong>: Net of current-year expenditures for refunds. - <strong>24. Insurance Taxes, Fees &amp; Licenses</strong>: Net of current-year expenditures for refunds. - <strong>27. Corporate Franchise Taxes &amp; Fees</strong><br>
+- <strong>31. Medical Provider Assessments</strong><br>
+- <strong>33. Lottery Receipts</strong><br>
+- <strong>35. Other Taxes</strong><br>
+- <strong>36. Receipts From Revenue Producing</strong><br>
+- <strong>39. Licenses, Fees &amp; Registrations</strong><br>
+- <strong>42. Motor Vehicle &amp; Operators</strong>&nbsp;<br>
+- <strong>48. Riverboat Wagering Taxes</strong>&nbsp;<br>
+- <strong>54. Gifts and Bequests</strong>&nbsp;<br>
+- <strong>78. All Other Sources</strong>: include the following smaller sources - 30.&nbsp; Horse Racing Taxes &amp; Fees.&nbsp; - 60.&nbsp; Other Grants and Contracts.&nbsp; - 63.&nbsp; Investment Income.&nbsp; - <strong>58. Federal Medicaid</strong>: federal receipts of the Department of Healthcare and Family Services (agency 478) attributable to Medicaid. <code>agency = 478 &amp; source =&nbsp;0618,&nbsp;2364,&nbsp;0660,&nbsp;1552,&nbsp;2306,&nbsp;2076,&nbsp;0676, 0692</code> - <strong>59.&nbsp; Federal Transportation</strong>: Federal receipts of the Department of Transportation (<code>agency=494</code>) - <strong>57.&nbsp; Federal Other</strong>:&nbsp;All federal sources except for above two categories (<code>rev_type = 57</code>)</p>
 </section>
 <section id="exclusion-1" class="level5">
 <h5 class="anchored" data-anchor-id="exclusion-1">2.2.3. Exclusion</h5>

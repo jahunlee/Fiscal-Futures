@@ -285,25 +285,36 @@ Generated Files
 </div>
 <section id="data-integration-and-consistency-check-allrevfiles_span-classcur-yearsspan.csv-and-allexpfiles_span-classcur-yearsspan.csv" class="level3">
 <h3 class="anchored" data-anchor-id="data-integration-and-consistency-check-allrevfiles_span-classcur-yearsspan.csv-and-allexpfiles_span-classcur-yearsspan.csv">1. Data Integration and Consistency Check (<code>allrevfiles_&lt;span class="cur-years"&gt;&lt;/span&gt;.csv</code> and <code>allexpfiles_&lt;span class="cur-years"&gt;&lt;/span&gt;.csv</code>)</h3>
-<p>Usually, the raw data from the IOC is inconsistent with past years. Therefore, make sure that the data consistency, through the following process:</p>
+<p>Usually, raw data from the IOC is inconsistent with prior years. Therefore, ensure data consistency through the following process:</p>
 <ol type="1">
-<li>Check any new agencies, re-used funds, etc.
+<li><strong>Identify new or reused entities</strong>
 <ul>
-<li>Create a list of funds, fund names, agencies, etc. for comparison between new year and prior year to identify new funds.</li>
+<li>Create lists of funds, fund names, and agencies, and compare the new fiscal year with the prior year to identify additions or reassignments.</li>
 </ul></li>
-<li>Update <code>funds_ab_in.xlsx</code>
+<li><strong>Update <code>funds_ab_in.xlsx</code></strong>
 <ul>
-<li><code>funds_ab_in.xlsx</code> shows the use of funds.</li>
-<li>Use criteria to determine if the new funds should be in or out of the all-funds frame.</li>
+<li>This file documents the use of funds.</li>
+<li>Apply the inclusion/exclusion criteria to determine whether any new funds belong in the all-funds frame.</li>
 </ul></li>
-<li>Change the variable names to consistent with other files
+<li><strong>Standardize variable names</strong>
 <ul>
+<li>Align variable names with prior years for consistency.<br>
+</li>
 <li>==Code Link==</li>
 </ul></li>
-<li>Combine past data with the newest data.</li>
-<li>Generate <code>allrevfiles_&lt;span class="cur-years"&gt;&lt;/span&gt;.csv</code> and <code>allexpfiles_&lt;span class="cur-years"&gt;&lt;/span&gt;.csv</code>
+<li><strong>Integrate datasets</strong>
+<ul>
+<li>Combine past years with the newest fiscal year once naming is harmonized.</li>
+</ul></li>
+<li><strong>Generate deliverables</strong>
+<ul>
+<li><code>allrevfiles_&lt;span class="cur-years"&gt;&lt;/span&gt;.csv</code> and <code>allexpfiles_&lt;span class="cur-years"&gt;&lt;/span&gt;.csv</code> ::: {=html}
 <script>
-  const curYear = new Date().getFullYear();  document.querySelectorAll('.cur-years').forEach(el => el.textContent = curYear); </script></li>
+const curYear = new Date().getFullYear();
+document.querySelectorAll('.cur-years').forEach(el => { el.textContent = curYear; });
+</script>
+:::</li>
+</ul></li>
 </ol>
 </section>
 <section id="recoding-data" class="level3">

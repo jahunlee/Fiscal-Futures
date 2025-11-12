@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#gathering-data" id="toc-gathering-data" class="nav-link" data-scroll-target="#gathering-data">Gathering Data</a></li>
   <li><a href="#wrangling-data" id="toc-wrangling-data" class="nav-link" data-scroll-target="#wrangling-data">Wrangling Data</a>
   <ul class="collapse">
-  <li><a href="#data-integration-and-consistency-check-allrevfiles_.csv-and-allexpfiles_.csv" id="toc-data-integration-and-consistency-check-allrevfiles_.csv-and-allexpfiles_.csv" class="nav-link" data-scroll-target="#data-integration-and-consistency-check-allrevfiles_.csv-and-allexpfiles_.csv">1. Data Integration and Consistency Check (allrevfiles_<span class="cur-years"></span>.csv and allexpfiles_<span class="cur-years"></span>.csv)</a></li>
+  <li><a href="#data-integration-and-consistency-check-allrevfiles_.csv-and-allexpfiles_.csv" id="toc-data-integration-and-consistency-check-allrevfiles_.csv-and-allexpfiles_.csv" class="nav-link" data-scroll-target="#data-integration-and-consistency-check-allrevfiles_.csv-and-allexpfiles_.csv">1. Data Integration and Consistency Check (<em>allrevfiles_<span class="cur-years"></span>.csv and allexpfiles_<span class="cur-years"></span>.csv</em>)</a></li>
   <li><a href="#recoding-data" id="toc-recoding-data" class="nav-link" data-scroll-target="#recoding-data">2. Recoding data</a></li>
   </ul></li>
   <li><a href="#reporting" id="toc-reporting" class="nav-link" data-scroll-target="#reporting">Reporting</a></li>
@@ -162,13 +162,21 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul></li>
 </ul>
-<blockquote class="blockquote">
-<p>[!All funds by SAMS manual]- - <strong>General Funds</strong>: Those funds established to receive the major portion of tax revenues and to pay the regular operating and administrative expenses of most State agencies.</p>
-</blockquote>
-<pre><code>&gt;&gt;[!General Funds (15 ILCS 20/50-40)]- 
-&gt;&gt;&nbsp;"General funds" or "State general funds" means the General Revenue Fund, the Common School Fund, the General Revenue Common School Special Account Fund, the Education Assistance Fund, the Fund for the Advancement of Education, the Commitment to Human Services Fund, and the Budget Stabilization Fund.  </code></pre>
-<blockquote class="blockquote">
+<div class="callout callout-style-default callout-note callout-titled" title="All funds by SAMS manual">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+All funds by SAMS manual
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <ul>
+<li><strong>General Funds</strong>: Those funds established to receive the major portion of tax revenues and to pay the regular operating and administrative expenses of most State agencies. &gt;&gt;[!General Funds (15 ILCS 20/50-40)]- &gt;&gt;&nbsp;“General funds” or “State general funds” means the General Revenue Fund, the Common School Fund, the General Revenue Common School Special Account Fund, the Education Assistance Fund, the Fund for the Advancement of Education, the Commitment to Human Services Fund, and the Budget Stabilization Fund.<br>
+</li>
 <li><strong>Highway Funds</strong>: Those funds established to receive and distribute special assessments related to transportation, such as Motor Fuel Tax, and to support the construction and maintenance of transportation facilities and activities of the State of Illinois.</li>
 <li><strong>Special State Funds</strong>: Those funds designated in Section 5 of the Finance Act as special funds in the State Treasury and not elsewhere classified. They represent a segregation of accounts for specific purposes on a substantially perpetual basis.</li>
 <li><strong>Bond Financed Funds</strong>: Those funds established to receive and administer the proceeds of various bond issues of the State.</li>
@@ -176,9 +184,14 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Federal Trust Funds</strong>: Those funds established pursuant to grants and contracts between State agencies and the United States. The funds are administered for specific purposes established by the terms of the grants and contracts.</li>
 <li><strong>Revolving Funds</strong>: Those funds established to finance and account for intra-governmental services. Appropriation of resources of these funds is dependent upon intra-governmental service requirements and appropriations of other State agencies. Revolving Fund resources are provided by expenditures of State agencies financed by the fund.</li>
 <li><strong>State Trust Funds</strong>: Those funds established by statute or under statutory authority for specific purposes.</li>
-<li><strong>Other Trust Funds</strong>: Those funds established to receive and account for resources for subsequent disbursement to a designated recipient. Escrow funds are an example of an Other Trust Fund. &gt; In the FF dataset, <code>University Income</code> is the only fund for Other Trust Funds in FY2026</li>
+<li><strong>Other Trust Funds</strong>: Those funds established to receive and account for resources for subsequent disbursement to a designated recipient. Escrow funds are an example of an Other Trust Fund.
+<ul>
+<li>In the FF dataset, <code>University Income</code> is the only fund for Other Trust Funds in FY2026</li>
+</ul></li>
 </ul>
-</blockquote>
+</div>
+</div>
+</div>
 <section id="inclusion-exclusion-criteria" class="level5">
 <h5 class="anchored" data-anchor-id="inclusion-exclusion-criteria">Inclusion / Exclusion Criteria</h5>
 <p>Most of appropriated funds<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> are included and non-appropriated funds<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> are excluded. However, there are some exceptions following criteria: ###### Inclusion 1. Non-appropriated funds collects a state-levied tax for state functions 2. Non-appropriated funds that supports a state function - Some non-appropriated funds support state functions such as education, social services, transportation, public facilities, regulation, natural resources, and law enforcement. - Generally, these are federal trust funds for a specified state project or purpose - Federal money are counted as revenue, it would be inconsistent if these funds would not included. 3. Non-appropriated funds collects a user fee that supports state functions - e.g.) Illinois State Toll Highway Revenue Fund, which collects tolls and supports the maintenance of Illinois toll roads.</p>
@@ -235,7 +248,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="wrangling-data" class="level1">
 <h1>Wrangling Data</h1>
 <div class="callout callout-style-default callout-note callout-titled" title="Generated Files">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -244,7 +257,7 @@ Generated Files
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol start="0" type="1">
 <li><p>Raw data</p></li>
@@ -284,7 +297,7 @@ Generated Files
 </div>
 </div>
 <section id="data-integration-and-consistency-check-allrevfiles_.csv-and-allexpfiles_.csv" class="level3">
-<h3 class="anchored" data-anchor-id="data-integration-and-consistency-check-allrevfiles_.csv-and-allexpfiles_.csv">1. Data Integration and Consistency Check (allrevfiles_<span class="cur-years"></span>.csv and allexpfiles_<span class="cur-years"></span>.csv)</h3>
+<h3 class="anchored" data-anchor-id="data-integration-and-consistency-check-allrevfiles_.csv-and-allexpfiles_.csv">1. Data Integration and Consistency Check (<em>allrevfiles_<span class="cur-years"></span>.csv and allexpfiles_<span class="cur-years"></span>.csv</em>)</h3>
 <p>Usually, raw data from the IOC is inconsistent with prior years. Therefore, ensure data consistency through the following process:</p>
 <ol type="1">
 <li><strong>Identify new or reused entities</strong>
@@ -308,7 +321,7 @@ Generated Files
 </ul></li>
 <li><strong>Generate deliverables</strong>
 <ul>
-<li>allrevfiles_<span class="cur-years"></span>.csv and allexpfiles_<span class="cur-years"></span>.csv</li>
+<li><em>allrevfiles_<span class="cur-years"></span>.csv and allexpfiles_<span class="cur-years"></span>.csv</em></li>
 </ul></li>
 </ol>
 <div class="{=html}">
@@ -330,7 +343,7 @@ Generated Files
 <h5 class="anchored" data-anchor-id="expenditure">2.2.1. Expenditure</h5>
 <p>In the Fiscal Futures (FF) project, the expenditures of the State of Illinois are classified by policy domain. The expenditure categories are organized into three types: - <strong>Single Agency</strong>: In most cases, the expenditure category corresponds directly to the name of a single bureau such as a <em>department</em>, <em>agency</em>, <em>branch</em>, <em>board</em>, or <em>commission</em>.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Single Agnecy">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -339,7 +352,7 @@ Single Agnecy
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><ol start="402" type="1">
@@ -402,7 +415,7 @@ Single Agnecy
 <li><strong>Quasi-Agency</strong>: Refers to categories that combine expenditures from multiple related agencies or programs that operate under shared policy functions.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Quasi-Agency">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -411,7 +424,7 @@ Quasi-Agency
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><del>901. Pension contribution</del></li>
@@ -435,7 +448,7 @@ Quasi-Agency
 <li><strong>Combination of Small Agencies</strong>: aggregated expenditures from several small agencies that are too minor to be analyzed individually.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Combination of Small Agencies">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -444,7 +457,7 @@ Combination of Small Agencies
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>943. Central Services</strong></li>

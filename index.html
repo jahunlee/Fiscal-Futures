@@ -308,14 +308,15 @@ Generated Files
 </ul></li>
 <li><strong>Generate deliverables</strong>
 <ul>
-<li><code>allrevfiles_&lt;span class="cur-years"&gt;&lt;/span&gt;.csv</code> and <code>allexpfiles_&lt;span class="cur-years"&gt;&lt;/span&gt;.csv</code> ::: {=html}
-<script>
-const curYear = new Date().getFullYear();
-document.querySelectorAll('.cur-years').forEach(el => { el.textContent = curYear; });
-</script>
-:::</li>
+<li><code>allrevfiles_&lt;span class="cur-years"&gt;&lt;/span&gt;.csv</code> and <code>allexpfiles_&lt;span class="cur-years"&gt;&lt;/span&gt;.csv</code></li>
 </ul></li>
 </ol>
+<div class="{=html}">
+<script>
+  const curYear = new Date().getFullYear();
+  document.querySelectorAll('.cur-years').forEach(el => { el.textContent = curYear; });
+</script>
+</div>
 </section>
 <section id="recoding-data" class="level3">
 <h3 class="anchored" data-anchor-id="recoding-data">2. Recoding data</h3>
@@ -324,7 +325,35 @@ document.querySelectorAll('.cur-years').forEach(el => { el.textContent = curYear
 </section>
 <section id="categorization" class="level4">
 <h4 class="anchored" data-anchor-id="categorization">2.2. Categorization</h4>
-<p>==I plan to make a table or visualization for categorization== ##### 2.2.1. Expenditure In the Fiscal Futures (FF) project, the expenditures of the State of Illinois are classified by policy domain. The expenditure categories are organized into three types: - <strong>Single Agency</strong>: In most cases, the expenditure category corresponds directly to the name of a single bureau such as a <em>department</em>, <em>agency</em>, <em>branch</em>, <em>board</em>, or <em>commission</em>. &gt;[!Single Agency]- &gt;- 402.&nbsp; Aging, Department of &gt;- 406.&nbsp; Agriculture, Department of (includes: 538. Farm Development Authority; 556 Rural Bond Bank – old agencies) &gt;- 418.&nbsp; Children and Family Services, Department of &gt;- 420.&nbsp; Commerce and Economic Opportunity,&nbsp;Department of &gt;- 422.&nbsp; Natural Resources, Department of &gt;- 425. Juvenile Justice,&nbsp;Department of &gt;- 426.&nbsp; Corrections, Department of &gt;- 427.&nbsp; Employment Security, Department of &gt;- 444.&nbsp; Human Services, Department of &gt;- 478.&nbsp; Healthcare &amp; Family Services, Department of (net of 945. Medicaid) &gt;- 482.&nbsp; Public Health, Department of &gt;- 492.&nbsp; Revenue, Department of &gt;- 494.&nbsp; Transportation&nbsp;(net Local Share)– e.g.&nbsp;public transportation, railroads, construction, equipment, maintenance &gt;- 532.&nbsp; Environmental Protect Agency&nbsp;– e.g.&nbsp;Air pollution control, land pollution control, clean water programs, stormwater management. &gt;- 557.&nbsp; Illinois State Toll Highway Authority&nbsp;– e.g.&nbsp;&nbsp;tollway capital Improvement, maintenance. Principal and interest are included as Tollway expenditures since they are combined in the data. &gt;- 684.&nbsp; Illinois Community College Board &gt;- 691.&nbsp; Illinois Student Assistance Commission</p>
+==I plan to make a table or visualization for categorization== ##### 2.2.1. Expenditure In the Fiscal Futures (FF) project, the expenditures of the State of Illinois are classified by policy domain. The expenditure categories are organized into three types: - <strong>Single Agency</strong>: In most cases, the expenditure category corresponds directly to the name of a single bureau such as a <em>department</em>, <em>agency</em>, <em>branch</em>, <em>board</em>, or <em>commission</em>.
+<details>
+<summary>
+<strong>Single Agency</strong>
+</summary>
+<blockquote class="blockquote">
+<ul>
+<li>402.&nbsp; Aging, Department of</li>
+<li>406.&nbsp; Agriculture, Department of (includes: 538. Farm Development Authority; 556 Rural Bond Bank – old agencies)</li>
+<li>418.&nbsp; Children and Family Services, Department of</li>
+<li>420.&nbsp; Commerce and Economic Opportunity,&nbsp;Department of</li>
+<li>422.&nbsp; Natural Resources, Department of</li>
+<li><ol start="425" type="1">
+<li>Juvenile Justice,&nbsp;Department of</li>
+</ol></li>
+<li>426.&nbsp; Corrections, Department of</li>
+<li>427.&nbsp; Employment Security, Department of</li>
+<li>444.&nbsp; Human Services, Department of</li>
+<li>478.&nbsp; Healthcare &amp; Family Services, Department of (net of 945. Medicaid)</li>
+<li>482.&nbsp; Public Health, Department of</li>
+<li>492.&nbsp; Revenue, Department of</li>
+<li>494.&nbsp; Transportation&nbsp;(net Local Share)– e.g.&nbsp;public transportation, railroads, construction, equipment, maintenance</li>
+<li>532.&nbsp; Environmental Protect Agency&nbsp;– e.g.&nbsp;Air pollution control, land pollution control, clean water programs, stormwater management.</li>
+<li>557.&nbsp; Illinois State Toll Highway Authority&nbsp;– e.g.&nbsp;&nbsp;tollway capital Improvement, maintenance. Principal and interest are included as Tollway expenditures since they are combined in the data.</li>
+<li>684.&nbsp; Illinois Community College Board</li>
+<li>691.&nbsp; Illinois Student Assistance Commission
+</li></ul></blockquote></details>
+
+
 <ul>
 <li><p><strong>Quasi-Agency</strong>: Refers to categories that combine expenditures from multiple related agencies or programs that operate under shared policy functions. &gt;[!Quasi-Agency]- &gt;- <del>901. Pension contribution</del> &gt;- 903. Debt Service &gt;- 904. State Employee Health Care &gt;- 945. Medicaid &gt;- 970. Transfer of Revenue to Local Governments</p></li>
 <li><p><strong>Combination of Small Agencies</strong>: aggregated expenditures from several small agencies that are too minor to be analyzed individually. &gt;[!Combination of Small Agencies]- &gt;- <strong>943. Central Services</strong> &gt;- <strong>910.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Legislative</strong> &gt;- <strong>920.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Judicial</strong> &gt;- <strong>930.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Elected Officers</strong> &gt;- <strong>941.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Public Safety</strong> &gt;- <strong>944.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Business &amp; Professional Regulation</strong>. &gt;- <strong>946.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Capital Improvement</strong>. &gt;- <strong>948.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other Departments</strong>. &gt;- <strong>949.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other Boards &amp; Commissions</strong>. &gt;- <strong>959. K-12 Education</strong> &gt;- <strong>960.&nbsp;University Education.</strong></p></li>

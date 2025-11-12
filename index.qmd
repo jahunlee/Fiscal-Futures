@@ -11,508 +11,244 @@ format:
 This page is an attempt to bring together information about the Fiscal Futures Project in one place.
 For me, it's difficult to understand the project because it feels so large and the information seems  scattered across many places (though maybe it isn't, really).
 
-## Table of Contents (will be deleted once it is done)
-
--   [Introduction](#introduction)
--   [Requesting Data from the IOC](#requesting-data-from-the-ioc)
--   [Data Wrangling](#data-wrangling)
-    -   [Related Files](#related-files)
-    -   [Data Processing](#data-processing) - [`allexpfiles.csv`, `allrevfile.csv`](#allexpfilescsv-allrevfilecsv)
-        -   [`funds_ab_in.xlsx`](#funds_ab_inxlsx)
-        -   [`rev_temp.csv` & `exp_temp.csv`](#rev_tempcsv--exp_tempcsv)
-    -   [Category recoding](#category-recoding)
-        -   [`exp_temp.csv`](#exp_tempcsv)
-            -   [Tax Refund](#tax-refund)
-            -   [Expenditure Category](#expenditure-category)
-            -   [Quasi-Agency](#quasi-agency)
-            -   [Single Agencies Function as Expenditure Categories](#single-agencies-function-as-expenditure-categories)
-            -   [Combination of multiple smaller agencies](#combination-of-multiple-smaller-agencies)
-        -   [`rev_temp.csv`](#rev_tempcsv)
-            -   [Tax refunds](#tax-refunds)
-            -   [Revenue Category](#revenue-category)
-                -   [Federal to State Transfers](#federal-to-state-transfers)
-            -   [Not included in Fiscal Futures:](#not-included-in-fiscal-futures)
--   [Reporting](#Reporting)
-
-
-# Introduction {#introduction}
-
--   FF transforms the data from the IOC to provide accurate time-series data.
-    -   The Illinois Office of Comptroller (IOC) and political discussion use the concept of General Fund but it is not consistent over time.
-        -   For example, money for a specific program may come from one fund in a given year, but the source may change to another fund in the next year.
-    -   To address this inconsistency, FF adopts an **All Funds** approach, which tracks revenues and expenditures by the functions of Illinois State Government.
-
-# Requesting Data from the IOC {#requesting-data-from-the-ioc}
 
--   FF uses data from the IOC, obtained through the IOC’s Freedom of Information Officer (FOIA).
--   An RA has to request data after the lapse period ends
-    -   Template for request: *==Link will be added==*
-    -   Check that lapse period is fully ended
-        -   the lapse period ended on August 31, but may remain opened for error corrections and late billings.
-        -   Generally, revenue data is complete earlier than expenditure
--   Data is separated into **Expenditure** and **Revenue** in MS-Excel files
+# Methodology
+### All Funds Approach
+- FF transforms the data from the Illinois Office of Comptroller (IOC) to provide accurate time-series data.
+- FF adopts an **All Funds approach**, which tracks revenues and expenditures by the functions of Illinois State Government in order to address inconsistency from the *General Fund approach*
+	- The concept of *General Fund* is used by the IOC and political discussion, but it is not consistent over time.
+		- For example, money for a specific program may come from one fund in a given year, but the source may change to another fund in the next year.
+
+>[!All funds by SAMS manual]-
+>- **General Funds**: Those funds established to receive the major portion of tax revenues and to pay the regular operating and administrative expenses of most State agencies. 
+	>>[!General Funds (15 ILCS 20/50-40)]- 
+	>> "General funds" or "State general funds" means the General Revenue Fund, the Common School Fund, the General Revenue Common School Special Account Fund, the Education Assistance Fund, the Fund for the Advancement of Education, the Commitment to Human Services Fund, and the Budget Stabilization Fund.  
+>- **Highway Funds**: Those funds established to receive and distribute special assessments related to transportation, such as Motor Fuel Tax, and to support the construction and maintenance of transportation facilities and activities of the State of Illinois. 
+>- **Special State Funds**: Those funds designated in Section 5 of the Finance Act as special funds in the State Treasury and not elsewhere classified. They represent a segregation of accounts for specific purposes on a substantially perpetual basis. 
+>- **Bond Financed Funds**: Those funds established to receive and administer the proceeds of various bond issues of the State. 
+>- **Debt Service Funds**: Those funds established to finance and account for the payment of principal redemption and interest associated with the general obligation bond issues of the State.
+>- **Federal Trust Funds**: Those funds established pursuant to grants and contracts between State agencies and the United States. The funds are administered for specific purposes established by the terms of the grants and contracts. 
+>- **Revolving Funds**: Those funds established to finance and account for intra-governmental services. Appropriation of resources of these funds is dependent upon intra-governmental service requirements and appropriations of other State agencies. Revolving Fund resources are provided by expenditures of State agencies financed by the fund. 
+>- **State Trust Funds**: Those funds established by statute or under statutory authority for specific purposes. 
+>- **Other Trust Funds**: Those funds established to receive and account for resources for subsequent disbursement to a designated recipient. Escrow funds are an example of an Other Trust Fund.
+>> In the FF dataset, `University Income` is the only fund for Other Trust Funds in FY2026
+
+##### Inclusion / Exclusion Criteria
+Most of appropriated funds[^1] are included and non-appropriated funds[^2] are excluded. However, there are some exceptions following criteria:
+###### Inclusion
+1. Non-appropriated funds collects a state-levied tax for state functions
+2. Non-appropriated funds that supports a state function
+	- Some non-appropriated funds support state functions such as education, social services, transportation, public facilities, regulation, natural resources, and law enforcement.
+		- Generally, these are federal trust funds for a specified state project or purpose
+		- Federal money are counted as revenue, it would be inconsistent if these funds would not included.
+3. Non-appropriated funds collects a user fee that supports state functions 
+	- e.g.) Illinois State Toll Highway Revenue Fund, which collects tolls and supports the maintenance of Illinois toll roads.
+
+###### Exclusion
+1. The funds that Illinois state solely collects for local taxing body
+2. The funds that hold monies for individuals, not the state
+	- e.g.) child support collection funds or employee pension own-contribution funds
+3. The fund's expenditure or revenues have been counted elsewhere (i.e., avoid double-counting)
+	- e.g.) Commercial consolidation fund distributes state benefit payments to individuals, service providers, and local governments by direct deposit. The revenues to this fund is included, but expenditures from this fund are not.
+
+4. The fund holds designated user fees targeted for a specific purpose that is not a public function.
+	- e.g.) fund 0098 collects fees from harness race entrants and pays them out to race winners.
+5. The funds that are dead or lack clear information
+	- These funds are generally appear to be very small.
+	- Because we are projecting forward from the most recently completed fiscal year, we assumed that these funds would not be in the frame.
+
+>[!comment]
+>`in_ff == 0` include State trust fund, Special state fund, Federal trust funds, and University income
+
+
+[^1]: **Appropriated funds** are authorized and granted by the State Legislature and are approved by the Governor. 
+[^2]: **Non-appropriated funds** are those that are not appropriated by the state of Illinois. The budget for expenditure of non-appropriated funds is, however, approved by the Board of Trustees.
+
+
+
+
+# Gathering Data
+#### Request Data
+- FF uses data through the IOC’s Freedom of Information Officer (FOIA).
+- A RA has to request data after the lapse period ends
+	1. Ask lapse period is fully ended to the IOC
+        - The lapse period ended on August 31, but may remain opened for error corrections and late billings.
+        - I used the function at the website: [Contact Us: Send Us a Message](https://office.illinoiscomptroller.gov/sendusmessage/index.cfm)
+    - Template for request: _==Link will be added==_
+- Data will be separated into **Expenditure** and **Revenue** in MS-Excel files
+
+
+# Wrangling Data
+
+>[! Generated Files]-
+>0. Raw data
+>1. Raw Data after Consistency Process
+>	- **`allrevfiles.xlsx`**, **`allexpfiles.xlsx`** : Raw data from IOC
+>	- [**`funds_ab_in.xlsx`**](https://jahunlee.github.io/Fiscal-Futures/Manual_Draft#^dd03d9): Funds information used since 1998, created from FF
+>		- contains all funds that have existed, their current status of existence, whether their numbers have been reused different purposes, and the new fund numbers each year by the IOC.
+>	- **`ioc_source_type.xlsx`** : Source type information, created from FF
+ >2. FF Data after Recoding Variables
+ >	- `rev_allyears.csv`, `exp_allyears.csv`
+ >		- initial combined data files, merged with `funds_ab_in.xlsx`, and `ioc_source_type.xlsx`
+ >		- Cleaned version of data before aggregating totals or dropping observations not included in the FF fiscal gap calculation.
+ >			- Contain all years in one file.
+ >			- Funds and agencies should have numbers and consistent labels.
+ >			- Includes the “Group” variable used in the FF Annual Report used for calculating expenditures by function. 
+ >	- `rev_temp.csv`, `exp_temp.csv`: Data prepared for the FF annual report
+ >		- Data is cleaned and coded up to the point right before aggregating category totals.
+ >		- Drops observations we do not keep in fiscal gap calculation.
+ > 3. Final Outputs for Reporting
+ >	- ~~`summary_file_FY20XX.xlsx`~~
+
+### 1. Data Integration and Consistency Check (`allrevfiles_<span class="cur-years"></span>.csv` and `allexpfiles_<span class="cur-years"></span>.csv`)
+Usually, the raw data from the IOC is inconsistent with past years. 
+Therefore, make sure that the data consistency, through the following process:
+
+1. Check any new agencies, re-used funds, etc. 
+	- Create a list of funds, fund names, agencies, etc. for comparison between new year and prior year to identify new funds.
+2. Update `funds_ab_in.xlsx`
+	- `funds_ab_in.xlsx` shows the use of funds. 
+	- Use criteria to determine if the new funds should be in or out of the all-funds frame.
+3. Change the variable names to consistent with other files
+	- ==Code Link==
+4. Combine past data with the newest data.
+5. Generate `allrevfiles_<span class="cur-years"></span>.csv` and `allexpfiles_<span class="cur-years"></span>.csv` <script>
+  const curYear = new Date().getFullYear();  document.querySelectorAll('.cur-years').forEach(el => el.textContent = curYear); </script>
+
+
+### 2. Recoding data
+#### 2.1. Recoding New and Reused Funds
+
+
+#### 2.2. Categorization 
+==I plan to make a table or visualization for categorization==
+##### 2.2.1. Expenditure
+In the Fiscal Futures (FF) project, the expenditures of the State of Illinois are classified by policy domain. The expenditure categories are organized into three types:
+- **Single Agency**: In most cases, the expenditure category corresponds directly to the name of a single bureau such as a _department_, _agency_, _branch_, _board_, or _commission_.
+>[!Single Agency]-
+>- 402.  Aging, Department of
+>- 406.  Agriculture, Department of (includes: 538. Farm Development Authority; 556 Rural Bond Bank – old agencies)
+>- 418.  Children and Family Services, Department of
+>- 420.  Commerce and Economic Opportunity, Department of
+>- 422.  Natural Resources, Department of
+>- 425.  Juvenile Justice, Department of
+>- 426.  Corrections, Department of
+>- 427.  Employment Security, Department of
+>- 444.  Human Services, Department of
+>- 478.  Healthcare & Family Services, Department of (net of 945. Medicaid)
+>- 482.  Public Health, Department of
+>- 492.  Revenue, Department of
+>- 494.  Transportation (net Local Share)– e.g. public transportation, railroads, construction, equipment, maintenance
+>- 532.  Environmental Protect Agency – e.g. Air pollution control, land pollution control, clean water programs, stormwater management.
+>- 557.  Illinois State Toll Highway Authority – e.g.  tollway capital Improvement, maintenance. Principal and interest are included as Tollway expenditures since they are combined in the data.
+>- 684.  Illinois Community College Board
+>- 691.  Illinois Student Assistance Commission
+
+- **Quasi-Agency**: Refers to categories that combine expenditures from multiple related agencies or programs that operate under shared policy functions.
+>[!Quasi-Agency]-
+>- ~~901. Pension contribution~~
+>- 903. Debt Service
+>- 904. State Employee Health Care
+>- 945. Medicaid
+>- 970. Transfer of Revenue to Local Governments
+
+- **Combination of Small Agencies**: aggregated expenditures from several small agencies that are too minor to be analyzed individually.
+>[!Combination of Small Agencies]-
+>- **943. Central Services**
+>- **910.       Legislative**
+>- **920.       Judicial**
+>- **930.       Elected Officers**
+>- **941.       Public Safety**
+>- **944.       Business & Professional Regulation**.
+>- **946.       Capital Improvement**.
+>- **948.       Other Departments**.
+>- **949.       Other Boards & Commissions**.
+>- **959. K-12 Education**
+>- **960. University Education.**
+
+##### 2.2.2. Revenue
+Revenue categories are aggregated under the following revenue type codes.
+- **02.  Individual Income Taxes**. 
+    - Gross of local share. 
+    - Excludes funds allocated to Income Tax Refund Fund (0278) and the Protest Fund.
+- **03.  Corporate Income Taxes**
+    - Gross of the personal property replacement tax levied on businesses. 
+    - Excludes funds allocated to Income Tax Refund Fund (0278).
+- **06.  Sales Taxes**
+    - Collections of the general sales and use tax at the 6.25 percent rate—1.25 of which is remitted to local governments and 5.00 of which is retained by the state. 
+    - The Fiscal Futures project does not include the collections at the 1.0 percent rate that applies only to food and drugs and goes to local governments (deposited in the State and Local Sales Tax Reform Fund).
+- **09.  Motor Fuel Tax**. 
+    - Gross of the portion transferred to local governments. 
+    - Net of current-year expenditures for refunds. 
+- **12.  Public Utility Taxes**. 
+    - Gross of the Personal Property Replacement Tax on public utilities that is transferred to local governments. 
+- **15.  Cigarette Taxes**. 
+- **18.  Liquor Gallonage Taxes**. 
+- **21.  Inheritance Tax**: Net of current-year expenditures for refunds.
+- **24.  Insurance Taxes, Fees & Licenses**: Net of current-year expenditures for refunds.
+- **27.  Corporate Franchise Taxes & Fees**     
+- **31.  Medical Provider Assessments**    
+- **33.  Lottery Receipts**    
+- **35.  Other Taxes**    
+- **36.  Receipts From Revenue Producing**    
+- **39.  Licenses, Fees & Registrations**    
+- **42.  Motor Vehicle & Operators**     
+- **48.  Riverboat Wagering Taxes**     
+- **54.  Gifts and Bequests**     
+- **78.  All Other Sources**: include the following smaller sources
+        - 30.  Horse Racing Taxes & Fees. 
+        - 60.  Other Grants and Contracts. 
+        - 63.  Investment Income. 
+- **58.  Federal Medicaid**:  federal receipts of the Department of Healthcare and Family Services (agency 478) attributable to Medicaid. 
+	`agency = 478 & source = 0618, 2364, 0660, 1552, 2306, 2076, 0676, 0692`
+- **59.  Federal Transportation**: Federal receipts of the Department of Transportation (`agency=494`)
+- **57.  Federal Other**: All federal sources except for above two categories (`rev_type = 57`)
+
+##### 2.2.3. Exclusion
+- 32. Garnishment-Levies: (State is fiduciary, not beneficiary)
+- 45. Student Fees-Universities: (Excluded from state-level budget)
+- 51. Retirement Contributions (of individuals and non-state entities)
+- 66. Proceeds, Investment Maturities: (Not sustainable flow)
+- 72. Bond Issue Proceeds : (Not sustainable flow)
+- 75. Inter-Agency Receipts
+- 79. Cook County Intergovernmental Transfers: (State is not beneficiary)
+- 98. Prior Year Refunds
+- 99. Statutory Transfers
 
-# Data Wrangling {#data-wrangling}
 
-## Related Files {#related-files}
 
--   Raw data
-    -   **`allrevfiles.xlsx`**, **`allexpfiles.xlsx`** : Raw data from IOC
-
-    -   [**`funds_ab_in.xlsx`**](Manual_Draft#%5Edd03d9): Funds information used since 1998, created from FF
-
-        -   contains all funds that have existed, their current status of existence, whether their numbers have been reused different purposes, and the new fund numbers each year by the IOC.
-
-    -   **`ioc_source_type.xlsx`** : Source type information, created from FF
--   Intermediate Outputs
-    -   `rev_allyears.csv`, `exp_allyears.csv`
-        -   initial combined data files, merged with `funds_ab_in.xlsx`, and `ioc_source_type.xlsx`
-        -   Cleaned version of data before aggregating totals or dropping observations not included in the FF fiscal gap calculation.
-            -   Contain all years in one file.
-            -   Funds and agencies should have numbers and consistent labels.
-            -   Includes the “Group” variable used in the FF Annual Report used for calculating expenditures by function. 
-    -   `rev_temp.csv`, `exp_temp.csv`: Data prepared for the FF annual report
-        -   Data is cleaned and coded up to the point right before aggregating category totals.
-        -   Drops observations we do not keep in fiscal gap calculation.
--   ~~Final outputs~~
-    -   ~~`summary_file_FY20XX.xlsx`~~
-
-## Data Processing {#data-processing}
-
-#### `allexpfiles.csv`, `allrevfile.csv`
-
--   The first task is to make data consistent with the previous data.
-    -   The FOIA of IOC send the expenditure and revenue data as excel files.
-
-1.  Change the variable names to be consistent with other files.
-    -   They seem to change almost every year in the file received from the FOIA
-    -   For example:
-        -   `AGENCYNAME` --\> `agency_name`
-2.  Once variable names are shared over all years of data, combine past years with newest year.
-    -   Bind all past years and the current year together in one dataframe
-    -   Save the data file as a csv file in its Revenue/Expenditure file
-        -   When adding new fiscal years, put the the newest year of data for revenue and expenditures in their respective folders.
-            -   All revenue files are in a \`revenue\` folder that I reference when I set the working directory.
-
--   ==Link to R code or file will be added==
-    -   "\# Gathering and Cleaning Data! {#sec-gathering-and-cleaning-data}" in code-cleaning.qmd
-
-### `funds_ab_in.xlsx`
-
-\^dd03d9
-
--   General steps:
-    1.  Identify new funds and agencies and reused funds for newest fiscal year.
-        -   Create a list of funds, agencies, fund names, etc. for the new year from the raw files (i.e., `allexpfiles.xlsx`, `allrevfiles.xlsx`)
-        -   Identify new funds by comparing the list to the immediate prior year.
-    2.  Recode funds to take into account different fund numbers/names over the years.
-        -   Use criteria to determine if the new funds should be in or out of the all-funds frame.
-        -   See \[Recoding New and Reused Funds\] for code chunk that does this.\
-    3.  Update `inputs/funds_ab_in.xlsx` with any changes from previous fiscal year.
--   ==Link to R code or file will be added==
-    -   "\### Finding new agencies and funds" in code-cleaning.qmd
-    -   "\### Recoding New and Reused Funds" in code-cleaning.qmd
-
-### `rev_temp.csv` & `exp_temp.csv`
-
--   the initial combined and years of data are saved as dataframes named `exp_allyears` and `rev_allyears`.
-    -   These are then saved as exp_temp and rev_temp while recoding variables.
-    -   This is BEFORE creating Fiscal Future category groups and further data cleaning done in the Calculating the Fiscal Gap page.
--   For aggregating revenue, use the `rev_allyears` file, join the `funds_ab_in` file to it, and then join the `ioc_source_type` file.
-    -   Remember: You need to update the `funds_ab_in` and `ioc_source_type` file every year!
--   The `exp_temp.csv` file and `rev_temp.csv` file are most likely the data that non-Fiscal Future researchers would want to use for their own analyses. These files should have consistent agencies and funds tracked from 1998 to the present.
-
-## Category recoding {#category-recoding}
-
-### `exp_temp.csv`
-
--   Aggregate expenditures
-
-#### Tax Refund {#tax-refund}
-
-Save tax refunds as negative revenue. - Code refunds to match the rev_type codes: - 02 = income taxes - fund == "0278" & sequence == "00" - fund == "0278" & sequence == "02" - 03 = corporate income taxes - fund == "0278" & sequence == "01" - 06 = sales tax - obj_seq_type == "99250055" - 09 = motor fuel tax - 21= Inheritance tax - object 9921 - 24 = insurance taxes and fees - fund == "0378" & object == "9925" - 35 = all other tax refunds - fund == "0001" & object == "9925"
-
-#### Expenditure Category {#expenditure-category}
-
--   object == 4431
-
--   In most cases, the expenditure category is synonymous with a name of department, branch, agency, board, or commission
-
--   Some categories are grouped separately from the agency
-
-    -   *Quasi-agencies*: ~~pensions~~, debt service, state employee healthcare, Medicaid, and transfers of revenue to local government
-
--   Combination of small agencies \#### Quasi-Agency
-
--   ~~901. Pension Contributions~~
-
-    -   Not used for FY2024 onward. Pension expenditures combined with function expenses. \> \[!CODE\] \> - object == "4431" -\> pension = 1 \> - object == "1298" & fy == (2010, 2011) & fund == ("0477", "0479", "0481") -\> pension = 3 \> - fund == "0319" (Pension Stabilization Fund) -\> pension = 4
-
--   
-
-    903. Debt Service
-
-    -   ==Link to `debt.qmd` will be added== \> \[!CODE\] \> - object == "8813" \> - obj_seq_type == ("88130000", "88130008", "88130108") \> - object == "8800" \> - except for fund == "0455", or agency == ("557", "577")
-
-    -   Excluded from debt service \> \[!CODE\] \> - Principal : object == "8811" \> - obj_seq_type == "88110008" \> - obj_seq_type == "88110108" \> - object == "8841" \> - obj_seq_type == "88410008" \> - object == "8800" & fund == "0455"
-
--   
-
-    904. State Employee Health Care
-
-    -   Only actual health insurance expenditures from HIRF and related funds administered through CMS/HFS are included,
-        -   Fund 0907: Health Insurance Reserve Fund
-        -   Fund 0457: Group Insurance Premium Fund
-        -   Fund 9939: Group self-insurers’ insolvency fund
-        -   Fund 0739 : Group workers comp pool insolvency fund \> \[!Code\] \> - fund == ("0907", "0457", "9939", "0739")
-    -   Employer contributions (object 1180/1900) and certain local, university, and self-insurance fund expenditures are excluded
-        -   Fund 0193: Local govt health insurance reserve
-
-        -   Fund 0477: Community College Health Insurance
-
-        -   Fund 0940: Self-Insurers security fund
-
-        -   Object 1180: Employer contributions
-
-        -   Object 1900: Lump-sum employer contributions (FY21-22) \> \[!CODE\] \> - fund == "0193", "0477", "0940" \> - object = ("1180", "1900")
-
--   
-
-    945. Medicaid \> \[!CODE\] \> agency = "478" & appr_org = ("01", "65", "88") & object == ("4900", "4400") \> agency == "586" & fund == "0355"
-
--   
-
-    970. Transfer of Revenue to Local Governments
-
-#### Single Agencies Function as Expenditure Categories {#single-agencies-function-as-expenditure-categories}
-
-> \[!CODE\] Category = Agency
-
--   4**02.  Aging**, Department of
--   **406.  Agriculture**, Department of (includes: 538. Farm Development Authority; 556 Rural Bond Bank – old agencies)
--   **418.  Children and Family Services**, Department of
--   **420.  Commerce and Economic Opportunity,** Department of
--   **422.  Natural Resources**, Department of
--   **425. Juvenile Justice,** Department of
--   **426.  Corrections**, Department of
--   **427.  Employment Security**, Department of
--   **444.  Human Services**, Department of
--   **478.  Healthcare & Family Services**, Department of (net of 945. Medicaid)
--   **482.  Public Health**, Department of
--   **492.  Revenue**, Department of
--   **494.  Transportation** (net Local Share)– e.g. public transportation, railroads, construction, equipment, maintenance
--   **532.  Environmental Protect Agency** – e.g. Air pollution control, land pollution control, clean water programs, stormwater management.
--   **557.  Illinois State Toll Highway Authority** – e.g.  tollway capital Improvement, maintenance. Principal and interest are included as Tollway expenditures since they are combined in the data.
--   **684.  Illinois Community College Board**
--   **691.  Illinois Student Assistance Commission**
-
-#### Combination of multiple smaller agencies {#combination-of-multiple-smaller-agencies}
-
-> \[!CODE\]
-
-```         
-    > - Catergory = Agencies
-```
-
--   **943. Central Services**
-    -   416.  Central Management Services
-    -   
-        448. Innovation and Technology
--   **910.       Legislative**.  Combination of
-    -   101.  General Assembly
-    -   102.  Office of the Legislative Inspector General
-    -   103.  Office of the Auditor General
-    -   105.  Commission on Government Forecasting & Accountability (COGFA)
-    -   108.  Legislative Information System
-    -   109.  Legislative Audit Commission
-    -   110.  Legislative Printing Unit
-    -   115.  Legislative Reference Bureau
-    -   120.  Legislative Ethics Commission
-    -   156.  Office of the Architect of the Capitol
-    -   167.  Joint Committee on Administrative Rules
-    -   *Past Legislative:*
-        -   *107. Commission on Intergovernmental Cooperation*
-        -   *112.  Legislative Research Unit*
-        -   *155.  Legislative Space Needs Commission*
-        -   *140.  Pension Laws Commission*
--   **920.       Judicial**.  Combination of
-    -   201.  Supreme Court
-    -   210.  Supreme Court Historic Preservation Commission
-    -   
-        280. Courts Commission
-    -   285.  Judicial Inquiry Board
-    -   290.  State Appellate Defenders Office
-    -   295.  State's Attorneys Appellate Prosecutor
-    -   528.  Court of Claims
-    -   *Past agencies:*
-        -   *202.  Attorney Registration and Disciplinary Commission*
-        -   *203.  Board of Admissions to the Bar*
-        -   *205.  Clerk of the Supreme Court*
-        -   *215.  Appellate Court District 1*
-        -   *225.  Appellate Court District 2*
-        -   *235.  Appellate Court District 3*
-        -   *245.  Appellate Court District 4*
-        -   *255.  Appellate Court District 5*
--   **930.       Elected Officers**.  Combination of
-    -   310.  Governor
-    -   330.  Office of the Lt. Governor
-    -   340.  Office of the Attorney General
-    -   350.  Secretary of State
-    -   360.  Illinois Office of the Comptroller
-    -   370.  State Treasurer's Office
--   **941.       Public Safety**.  Combination of
-    -   425.  Department of Juvenile Justice
-    -   466.  Military Affairs
-    -   493.  Department of State Police
-    -   546.  Illinois Criminal Justice Information Authority
-    -   569.  Law Enforcement Training and Standards Board
-    -   578.  Prisoner Review Board
-    -   583.  Sex Offender Management Board
-    -   588.  Illinois Emergency Management Agency
-    -   591.  Illinois State Police Merit Board
-    -   592.  Office of the State Fire Marshal
--   **944.       Business & Professional Regulation**.  Combination of
-    -   440.  Department of Financial and Professional Regulation
-    -   446.  Department of Insurance
-    -   524.  Illinois Commerce Commission
-    -   563.  Illinois Workers' Compensation Commission
--   **946.       Capital Improvement**.  Combination of
-    -   511.  Capital Development Board
-    -   554.  Illinois Sports Facilities Authority
-    -   574.  Metropolitan Fair and Exposition Authority
-    -   598.  Upper Illinois River Valley Development Authority
--   **948.       Other Departments**.  Combination of
-    -   442.  Department of Human Rights
-
-    -   445.  IL Power Agency
-
-    -   452.  Department of Labor
-
-    -   458.  Illinois Lottery
-
-    -   497.  Department of Veterans Affairs
-
-    -   507.  Governor's Office of Management and Budget
-
-    -   
-
-        ## ***Non-pension items from pension departments***
-
-        ```         
-        131. General Assembly Retirement System
-        ```
-
-        -   
-
-            275. Judges Retirement System
-
-        -   
-
-            589. State Employees’ Retirement System
-
-        -   
-
-            593. Teachers’ Retirement System
-
-        -   
-
-            594. Teachers’ pension and retirement system
-
-        -   
-
-            693. State University Retirement System
--   **949.       Other Boards & Commissions**.  Combination of
-    -   503.  Illinois Arts Council
-    -   509.  Office of the Executive Inspector General
-    -   510.  Executive Ethics Commission
-    -   517.  Illinois Civil Service Commission
-    -   526.  Deaf and Hard of Hearing Commission
-    -   527.  Comprehensive Health Insurance Board
-    -   529.  East St. Louis Financial Advisory Authority
-    -   
-        533. Committee on Equity and Inclusion
-    -   534.  Health Information Exchange Authority
-    -   537.  Guardianship and Advocacy Commission
-    -   540.  Illinois Health Care
-    -   541.  Historic Preservation Agency
-    -   542.  Human Rights Commission
-    -   548.  Illinois Education Labor Relations Board
-    -   555.  Illinois State Board of Investments
-    -   558.  Illinois Council on Developmental Disabilities
-    -   559.  Illinois Violence Prevention Authority
-    -   562.  Procurement Policy Board
-    -   564.  Illinois Independent Tax Tribunal
-    -   565.  Illinois Gaming Board
-    -   567.  Liquor Control Commission
-    -   571.  Medical Center Commission
-    -   575.  Prairie State 2000 Authority
-    -   579.  Illinois Racing Board
-    -   580.  Property Tax Appeal Board
-    -   587.  Illinois State Board of Elections
-    -   590.  Illinois Labor Relations Board
-    -   ***Past Boards & Commissions:***
-        -   *525. Drycleaner Commission*
-        -   *568. IL Charter Schools Commission*
-        -   *585. Southwestern Development Authority*
--   **959. K-12 Education** - eg. After school programs, charter schools, breakfast/lunch programs, commodities, etc.
-    -   586.  Illinois State Board of Education (net of special education funds to 945. Medicaid).
--   **960. University Education.**  State contributions to higher education.  Note this does not include the entire budget of the schools, only the amount they get from the state.
-    -   601.  Board of Higher Education
-    -   608.  Chicago State University
-    -   612.  Eastern Illinois University
-    -   616.  Governors State University
-    -   620.  Northeastern Illinois University
-    -   628.  Western Illinois University
-    -   636.  Illinois State University
-    -   644.  Northern Illinois University
-    -   664.  Southern Illinois University
-    -   676.  University of Illinois
-    -   692.  Illinois Math and Science Academy
-    -   695.  State Universities Civil Service Merit Board
-
-### `rev_temp.csv`
-
-#### Tax refunds {#tax-refunds}
-
--   `tax_refund` amounts are removed from expenditure totals and subtracted from revenue totals (since they were tax refunds). \>\[!CODE\] \> - `rev_` - `ref_`
-
-#### Revenue Category {#revenue-category}
-
-Revenue categories are aggregated under the following revenue type codes. \>\[!CODE\] \> - Category = Rev_type in ff_rev
-
--   **02.  Individual Income Taxes**. 
-
-    -   Gross of local share. 
-    -   Excludes funds allocated to Income Tax Refund Fund (0278) and the Protest Fund.
-
--   **03.  Corporate Income Taxes**
-
-    -   Gross of the personal property replacement tax levied on businesses. 
-    -   Excludes funds allocated to Income Tax Refund Fund (0278).
-
--   **06.  Sales Taxes**
-
-    -   Collections of the general sales and use tax at the 6.25 percent rate—1.25 of which is remitted to local governments and 5.00 of which is retained by the state. 
-    -   The Fiscal Futures project does not include the collections at the 1.0 percent rate that applies only to food and drugs and goes to local governments (deposited in the State and Local Sales Tax Reform Fund).
-
--   **09.  Motor Fuel Tax**. 
-
-    -   Gross of the portion transferred to local governments. 
-    -   Net of current-year expenditures for refunds. 
-
--   **12.  Public Utility Taxes**. 
-
-    -   Gross of the Personal Property Replacement Tax on public utilities that is transferred to local governments. 
-
--   **15.  Cigarette Taxes**. 
-
--   **18.  Liquor Gallonage Taxes**. 
-
--   **21.  Inheritance Tax**
-
-    -   Net of current-year expenditures for refunds.
-
--   **24.  Insurance Taxes, Fees & Licenses**
-
-    -   Net of current-year expenditures for refunds.
-
--   **27.  Corporate Franchise Taxes & Fees**
-
--   **31.  Medical Provider Assessments**
-
--   **33.  Lottery Receipts**
-
--   **35.  Other Taxes**
-
--   **36.  Receipts From Revenue Producing**
-
--   **39.  Licenses, Fees & Registrations**
-
--   **42.  Motor Vehicle & Operators** 
-
--   **48.  Riverboat Wagering Taxes** 
-
--   **54.  Gifts and Bequests** 
-
--   **78.  All Other Sources**
-
-    -   Expanded to include the following smaller sources:
-        -   30.  Horse Racing Taxes & Fees. 
-        -   60.  Other Grants and Contracts. 
-        -   63.  Investment Income. 
-
-##### Federal to State Transfers {#federal-to-state-transfers}
-
--   Fiscal Futures creates separate codes for Medicaid (58) and Transportation grants (59) and reports the residual as Other (57).
-
--   **57.  Federal Other**  ==Link to R code will be added==
-
-    -   Comptroller codes all federal sources as 57.  \>rev_type = 57
-
--   **58.  Federal Medicaid** ==Link to R code will be added==
-
-    -   Detailed source codes are used to identify federal receipts of the Department of Healthcare and Family Services (agency 478) attributable to Medicaid. \> agency = 478 & source = `0618`, `2364`, `0660`, `1552`, `2306`, `2076`, `0676`, 0692
-
--   **59.  Federal Transportation** ==Link to R code will be added==
-
-    -   Federal receipts of the Department of Transportation (agency 494). \> agency = 494
-
-#### Not included in Fiscal Futures: {#not-included-in-fiscal-futures}
-
--   32. Garnishment-Levies. 
-    -   (State is fiduciary, not beneficiary.)
--   45. Student Fees-Universities.
-    -   (Excluded from state-level budget.)
--   51. Retirement Contributions (of individuals and non-state entities). 
--   66. Proceeds, Investment Maturities. 
-    -   (Not sustainable flow.)
--   72. Bond Issue Proceeds. 
-    -   (Not sustainable flow.)
--   75. Inter-Agency Receipts.
--   79. Cook County Intergovernmental Transfers. 
-    -   (State is not beneficiary.)
--   98. Prior Year Refunds. 
--   
-    99. Statutory Transfers
-    
-    
-    
-    
 # Reporting
 
-- Wide version:
-  - `exp_fy20**_recoded.csv`, `rev_fy20**_recoded.csv` : Data from FY1998 after data processing
-[View code in `Everything.qmd`](https://github.com/jahunlee/Fiscal-Futures/blob/5291c2791984b1819f938ef2e7a31b3f04c1bbd2/Files/Everything.qmd#L885-L886)
+1. Wide version:
+	- `exp_fy20**_recoded.csv`, `rev_fy20**_recoded.csv` : Data from FY1998 after data processing
+	- [`[View code🔗]`](https://github.com/jahunlee/Fiscal-Futures/blob/5291c2791984b1819f938ef2e7a31b3f04c1bbd2/Files/Everything.qmd#L885-L886)
 
 
-- Long version: 
-  - `expenditures_recoded_long2024.csv`, `revenue_recoded_long2024.csv` : Data from FY1998 after data processing, pivoted to a long format containing fiscal year, category, and dollar amounts.
-[View code in `Everything.qmd`](https://github.com/jahunlee/Fiscal-Futures/blob/5291c2791984b1819f938ef2e7a31b3f04c1bbd2/Files/Everything.qmd#L901-L1172)
-
-- 
-  - `summary_file_FY24_wTotals_2025_02_06.xlsx` " Summary workbook containing data (FY1998~FY2024)
+2. Long version: 
+	-  `expenditures_recoded_long2024.csv`, `revenue_recoded_long2024.csv` : Data from FY1998 after data processing, pivoted to a long format containing fiscal year, category, and dollar amounts.
+	- [`[View code🔗]`](https://github.com/jahunlee/Fiscal-Futures/blob/5291c2791984b1819f938ef2e7a31b3f04c1bbd2/Files/Everything.qmd#L901-L1172)
 
 
-[View code](https://github.com/jahunlee/Fiscal-Futures/blob/5291c2791984b1819f938ef2e7a31b3f04c1bbd2/Files/Everything.qmd#L2247-L2279)
-
-  - Table 1 (Main Revenues): Top 10 revenue categories, 1-year change,  `r as.numeric(format(Sys.Date(), "%Y")) - 1998` CAGR
-  - Table 2 (Main Expenditures): Top 13 expenditure categories, 1-year change, with  `r as.numeric(format(Sys.Date(), "%Y")) - 1998`-year CAGR
-  - Appendix 1. AllCats: All revenue categories—1-year change table (USD billions), with 26-year CAGR
-  - Appendix 2. AllCats: All expenditure categories—1-year change table (USD billions), with 26-year CAGR
-  - CAGR Rev-MajorCats: Major revenue categories—1·2·3·5·10·26-year CAGR summary
-  - CAGR Exp-MajorCats: Major expenditure categories—1·2·3·5·10·26-year CAGR summary
-  - Fiscal Gap: Yearly total revenues, total expenditures, and fiscal gap (source data)
-  - aggregated_totals_long: Long/tidy format for charts/pivots (Year × Category × Dollars, nominal millions)
-
-
-
-
+3. Final summary:`summary_file_FY24_wTotals_2025_02_06.xlsx` : [`[View code🔗]`](https://github.com/jahunlee/Fiscal-Futures/blob/5291c2791984b1819f938ef2e7a31b3f04c1bbd2/Files/Everything.qmd#L2247-L2279)
+    - Final summary workbook containing following sheets:
+	    - Table 1 (Main Revenues): Top 10 categories, 1-year change, <span class="years"></span>-year CAGR
+	    - Table 2 (Main Expenditures): Top 13 categories, 1-year change, <span class="years"></span>-year CAGR 
+	    - Appendix 1. AllCats: All revenue categories—1-year change table, with <span class="years"></span>-year CAGR
+	    - Appendix 2. AllCats: All expenditure categories—1-year change table, with <span class="years"></span>-year CAGR
+	    - CAGR Rev-MajorCats: Major revenue categories—1·2·3·5·10·<span class="years"></span>-year CAGR summary
+	    - CAGR Exp-MajorCats: Major expenditure categories—1·2·3·5·10·<span class="years"></span>-year CAGR summary
+	    - Fiscal Gap: Yearly total revenues, total expenditures, and fiscal gap
+	    - aggregated_totals_long: Long format data from FY1998
+	
+	<script>
+	  const diff = new Date().getFullYear() - 1998;
+	  document.querySelectorAll('.years').forEach(el => el.textContent = diff);
+	</script>
+  
 
 - **Calulating**
 
-1. Calculating the Fiscal Gap [View code](https://github.com/jahunlee/Fiscal-Futures/blob/5291c2791984b1819f938ef2e7a31b3f04c1bbd2/Files/Everything.qmd#L1183-L1327)
-
-
+1. Calculating the Fiscal Gap [`[View code🔗]`](https://github.com/jahunlee/Fiscal-Futures/blob/5291c2791984b1819f938ef2e7a31b3f04c1bbd2/Files/Everything.qmd#L1183-L1327)
 2. Pension Costs Included within Department Expenditures
 3. Illinois State Budget Data
 4. Own Source Revenue
@@ -525,5 +261,3 @@ Revenue categories are aggregated under the following revenue type codes. \>\[!C
 11. Tax Refunds
 12. K-12 Spending & ESSER Funds
 13. Federal COVID Money Received
-
-
